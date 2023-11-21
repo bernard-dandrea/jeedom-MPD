@@ -38,6 +38,7 @@ Indiquer la configuration du MPD :
 -   **Activer** : permet de rendre l'équipement actif
 -   **Visible** : le rend visible sur le dashboard
 -   **Adresse IP** : IP du serveur MPD, laisser à blanc si installé sur le serveur jeedom
+-   **Port** : Port d'écoute du serveur MPD, laisser à blanc si valeur par défaut
 -   **Mot de passe** : mot de passe pour l'accès au serveur MPD
 
 Les boutons suivants permettent les fonctions suivantes:
@@ -61,11 +62,11 @@ La commande 'Créer une commande' permet d'ajouter une action, par exemple pour 
 
 ![MPD_Widget](../images/MPD_Widget.png)
 
-La présentation de base permet d'exécuter les fonctions de base. Noter le bouton 'Refresh' qui permet d'actualiser les playlists. En sélectionnant une playlist, on initialise la Queue de MPD avec les songs correspondantes. La sélection d'une Song permet de la jouer.
+La présentation créée par défaut permet d'exécuter les fonctions de base. Noter le bouton 'Refresh' qui permet d'actualiser les playlists. En sélectionnant une playlist, on initialise la Queue de MPD avec les Songs correspondantes. La sélection d'une Song permet de la jouer.
 
 ![MPD_Equipement_Disposition](../images/MPD_Equipement_Disposition.png)
 
-La présentation est réalisée à l'aide de la fonction Disposition de l'équipement (dans 'Configuration avancée'.
+La présentation est réalisée à l'aide de la fonction Disposition de l'équipement (dans 'Configuration avancée').
 
 ![MPD_Widget_Favoris](../images/MPD_Widget_Favoris.png)
 
