@@ -1,0 +1,17 @@
+{
+  "pre-install" : {
+  },
+  "apt" : {
+    "mpc" : {}
+  },
+  "pip3": {
+  },
+  "npm": {
+  },
+  "yarn": {
+  },
+  "plugin": {
+  },
+  "post-install" : {
+  }
+}
