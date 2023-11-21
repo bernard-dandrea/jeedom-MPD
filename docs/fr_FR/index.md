@@ -6,7 +6,7 @@ Music Player Daemon, ou MPD, est un lecteur audio libre qui permet l'accès dist
 
 MPD permet de diffuser les morceaux (= song) qui se trouvent dans sa queue (= Queue). Celle-ci est alimentée par les playlists (les playlists ne sont pas gérées par le plugin). 
 
-Le plugin permet d'exécuter les fonctions de base (chargement de playlist, lecture, volume, ...) à partir de jeedom. Le plugin utilise l'utilitaire mpc pour exécuter les commandes sur le serveur MPD que celui-ci soit en local ou distant.
+Le plugin permet d'exécuter les fonctions de base (chargement de playlist, lecture, volume, ...) à partir de jeedom. Le plugin utilise l'utilitaire mpc pour exécuter les commandes sur le serveur MPD que celui-ci soit en local ou distant. Le package mpc est installé lors de l'activation du plugin.
 
 # Installation et configuration du serveur MPD
 
@@ -51,11 +51,11 @@ Les boutons suivants permettent les fonctions suivantes:
 
 Les commandes de base sont générées lors de la création de l'équipement.
 
-Pour chaque commande action, le champ Commande (stocké dans le LogicalID de la commande jeedom) indique la commande transmise à l'utilitaire mpc. Se reporter à la documentation de mpc pour plus d'information ( https://helpmanual.io/help/mpc/ ).
+Pour chaque commande de type action, le champ Commande (stocké dans le LogicalID de la commande jeedom) indique la commande transmise à l'utilitaire mpc. Se reporter à la documentation de mpc pour plus d'information ( <https://helpmanual.io/help/mpc/> ).
 
 ![MPD_Commandes_Ajout](../images/MPD_Commandes_Ajout.png)
 
-La commande 'Créer une commande' permet d'ajouter action, par exemple pour ajouter un racourci pour jouer une station radio. Pour cela, on peut utiliser la commande 'playsong' qui sera transformée en 'play' suivi du numéro de la song dans la Queue.    
+La commande 'Créer une commande' permet d'ajouter une action, par exemple pour ajouter un racourci pour jouer une station radio. Pour cela, on peut utiliser la commande 'playsong' qui sera transformée en 'play' suivi du numéro de la song dans la Queue.    
 
 # Widget
 
