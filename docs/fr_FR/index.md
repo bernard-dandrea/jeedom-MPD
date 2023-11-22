@@ -1,6 +1,6 @@
 # Plugin MPD
 
-Plugin permettant de controler un lecteur MPD.
+Plugin permettant de contrôler un lecteur MPD.
 
 Music Player Daemon, ou MPD, est un lecteur audio libre qui permet l'accès distant depuis un autre ordinateur. Il se trouve en background de nombreux serveurs multimedia comme moodeaudio, volumio, ...
 
@@ -12,7 +12,7 @@ Le plugin permet d'exécuter les fonctions de base (chargement de playlist, lect
 
 Le bon fonctionnement du plugin suppose que le serveur MPD soit opérationnel. 
 
-Celui-ci est le plus souvent installé de façon transparente par le serveur multimedia correspondant(volumio, moodeaudio, ...).
+Celui-ci est le plus souvent installé de façon transparente par le serveur multimedia correspondant (volumio, moodeaudio, ...).
 
 Par défaut, le serveur MPD attend les commandes sur le port 6600. Son accès peut être controlé par un mot de passe.
 
