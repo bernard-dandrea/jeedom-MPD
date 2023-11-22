@@ -4,7 +4,7 @@ Plugin permettant de controler un lecteur MPD.
 
 Music Player Daemon, ou MPD, est un lecteur audio libre qui permet l'accès distant depuis un autre ordinateur. Il se trouve en background de nombreux serveurs multimedia comme moodeaudio, volumio, ...
 
-MPD permet de diffuser les morceaux (= song) qui se trouvent dans sa queue (= Queue). Celle-ci est alimentée par les playlists (les playlists ne sont pas gérées par le plugin). 
+MPD permet de diffuser les fichiers audio (= Song) qui se trouvent dans sa queue (= Queue). Celle-ci est alimentée par les playlists (les playlists ne sont pas gérées par le plugin). 
 
 Le plugin permet d'exécuter les fonctions de base (chargement de playlist, lecture, volume, ...) à partir de jeedom. Le plugin utilise l'utilitaire mpc pour exécuter les commandes sur le serveur MPD que celui-ci soit en local ou distant. Le package mpc est installé lors de l'activation du plugin.
 
