@@ -38,7 +38,7 @@ Indiquer la configuration du MPD :
 -   **Activer** : permet de rendre l'équipement actif
 -   **Visible** : le rend visible sur le dashboard
 -   **Adresse IP** : IP du serveur MPD, laisser à blanc si installé sur le serveur jeedom
--   **Port** : Port d'écoute du serveur MPD, laisser à blanc si valeur par défaut
+-   **Port** : port d'écoute du serveur MPD, laisser à blanc si valeur par défaut
 -   **Mot de passe** : mot de passe pour l'accès au serveur MPD
 
 Les boutons suivants permettent les fonctions suivantes:

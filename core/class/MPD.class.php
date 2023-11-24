@@ -690,7 +690,7 @@ class MPDCmd extends cmd
                         if (is_object($command)) {
                             $command->execCmd();
                         }
-                        break;
+                        return true;
                     }
                 }
 
