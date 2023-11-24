@@ -7,6 +7,7 @@
 # 24/11/2023
 
 - Correction message debug
+- Ne change pas la song si elle est déjà en cours
 
 
 # 21/11/2023
