@@ -635,7 +635,7 @@ class MPDCmd extends cmd
                 $request = 'volume';
                 $result = $eqLogic->call_mpc($request);
 
-                if (substr($result[0], 0, 8) !== 'volume: ') {
+                if (substr($result[0], 0, 7) !== 'volume:') {
                     return false;
                 }
                 $volume = trim(str_replace('volume: ', '', $result[0]));
