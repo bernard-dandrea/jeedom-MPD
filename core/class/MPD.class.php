@@ -635,7 +635,7 @@ class MPDCmd extends cmd
                 $request = 'volume';
                 $result = $eqLogic->call_mpc($request);
 
-                if (substr($result[0], 0, 8) !== 'volume: ') {
+                if (substr($result[0], 0, 7) !== 'volume:') {
                     return false;
                 }
                 $volume = trim(str_replace('volume: ', '', $result[0]));
@@ -677,9 +677,18 @@ class MPDCmd extends cmd
                 return true;
 
             case 'song':
+
+                $request = 'current -f %file%';
+                $result = $eqLogic->call_mpc($request);
+                if ($result[0] == $value) {
+                    log::add('MPD', 'debug', 'song ' . $value . ' déjà en cours');
+                    return true;
+                }
+
+
                 $request = 'playlist -f %file%';
                 $result = $eqLogic->call_mpc($request);
-
+                
                 for ($i = 0; $i < count($result); $i++) {
                     if ($result[$i] == $value) {
 
@@ -691,6 +700,7 @@ class MPDCmd extends cmd
                             $command->execCmd();
                         }
                         return true;
+                        
                     }
                 }
 
