@@ -103,7 +103,7 @@ class MPD extends eqLogic
                 log::add ('MPD', 'info', __ ('generer_commandes ', __FILE__) . ' commande ' . $name);
                 $command = new MPDCmd ();
                 $command->setLogicalId ($logicalID);
-                $command->setIsVisible (0);
+                $command->setIsVisible (1);
                 $order++;
                 $command->setOrder ($order);
                 $command->setName ($name);
