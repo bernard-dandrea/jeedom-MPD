@@ -84,10 +84,10 @@ Le scenario ci-dessus, activé sur le changement d'état de #[Aucun][Cube][side]
 
 ![MPD_micube_toggle](../images/MPD_micube_toggle.png)
 
-Le scenario ci-dessus, activé sur le changement d'état de #[Aucun][Cube][button]#, permet d'arrêter et redémarrer la chanson en secouant le Mi Cube.
+Le scenario ci-dessus, activé sur le changement d'état de #[Aucun][Cube][Button]#, permet d'arrêter et redémarrer la chanson en secouant le Mi Cube.
 
 # Avis
 
 ![MPD_avis](../images/MPD_avis.png)
 
-Si vous appréciez ce plugin, merci de laisser une évaluation et un commentaire sur le jeedom market, ça fait toujours plaisir: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4464#>
+Si vous appréciez ce plugin, merci de laisser une évaluation et un commentaire sur le Jeedom market, ça fait toujours plaisir: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4464#>
