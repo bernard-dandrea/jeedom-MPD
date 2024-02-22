@@ -62,7 +62,7 @@ La commande 'Créer une commande' permet d'ajouter une action, par exemple pour 
 
 ![MPD_Widget](../images/MPD_Widget.png)
 
-La présentation créée par défaut permet d'exécuter les fonctions de base. Noter le bouton 'Refresh' qui permet d'actualiser les playlists. En sélectionnant une playlist, on initialise la Queue de MPD avec les Songs correspondantes. La sélection d'une Song permet de la jouer.
+La présentation créée par défaut permet d'exécuter les fonctions de base. Noter le bouton 'refresh' (en haut à gauche du widget) qui permet d'actualiser l'état du lecteur MPD (playlists, song en cours, ...). En sélectionnant une playlist, on initialise la Queue de MPD avec les Songs correspondantes. La sélection d'une Song permet de la jouer.
 
 ![MPD_Equipement_Disposition](../images/MPD_Equipement_Disposition.png)
 
@@ -71,8 +71,6 @@ La présentation est réalisée à l'aide de la fonction Disposition de l'équip
 ![MPD_Widget_Favoris](../images/MPD_Widget_Favoris.png)
 
 En modifiant, la présentation, on peut ajouter des racourcis. 
-
-Cliquer sur le bouton de mise à jour (en haut à gauche du widget), afin d'actualiser les playlists, songs et la song en cours de lecture.
 
 # Pilotage du lecteur audio à partir d'un Mi Cube
 
