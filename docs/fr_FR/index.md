@@ -62,7 +62,7 @@ La commande 'Créer une commande' permet d'ajouter une action, par exemple pour 
 
 ![MPD_Widget](../images/MPD_Widget.png)
 
-La présentation créée par défaut permet d'exécuter les fonctions de base. Noter le bouton 'Refresh' qui permet d'actualiser les playlists. En sélectionnant une playlist, on initialise la Queue de MPD avec les Songs correspondantes. La sélection d'une Song permet de la jouer.
+La présentation créée par défaut permet d'exécuter les fonctions de base. Noter le bouton 'refresh' (en haut à droite du widget) qui permet d'actualiser l'état du lecteur MPD (playlists, song en cours, ...). En sélectionnant une playlist, on initialise la Queue de MPD avec les Songs correspondantes. La sélection d'une Song permet de la jouer.
 
 ![MPD_Equipement_Disposition](../images/MPD_Equipement_Disposition.png)
 
@@ -70,4 +70,24 @@ La présentation est réalisée à l'aide de la fonction Disposition de l'équip
 
 ![MPD_Widget_Favoris](../images/MPD_Widget_Favoris.png)
 
-En modifiant, la présentation, on peut ajouter des racourcis.
+En modifiant, la présentation, on peut ajouter des racourcis. 
+
+# Pilotage du lecteur audio à partir d'un Mi Cube
+
+![MPD_micube](../images/MPD_micube.png)
+
+En utilisant les scénarios, il est possible de piloter son lecteur audio sans utiliser l'interface de Jeedom, à partir d'un périphérique de commande comme le Mi Cube de Xiaomi par exemple.
+
+![MPD_micube_song](../images/MPD_micube_song.png)
+
+Le scenario ci-dessus, activé sur le changement d'état de #[Aucun][Cube][side]#, permet de changer la station radio, en changeant le coté du Mi Cube.
+
+![MPD_micube_toggle](../images/MPD_micube_toggle.png)
+
+Le scenario ci-dessus, activé sur le changement d'état de #[Aucun][Cube][Button]#, permet d'arrêter et redémarrer la chanson en secouant le Mi Cube.
+
+# Avis
+
+![MPD_avis](../images/MPD_avis.png)
+
+Si vous appréciez ce plugin, merci de laisser une évaluation et un commentaire sur le Jeedom market, ça fait toujours plaisir: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4464#>

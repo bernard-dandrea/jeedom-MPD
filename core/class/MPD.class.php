@@ -172,8 +172,8 @@ class MPD extends eqLogic
             }
         }
 
-        $logicalID = 'refresh_all';
-        $name = 'Refresh';
+        $logicalID = 'refresh';
+        $name = 'refresh';
         if (is_object(cmd::byEqLogicIdCmdName($this->getId(), $name)) === false) {
             unset($command);
             $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
@@ -591,7 +591,7 @@ class MPDCmd extends cmd
         }
 
         switch ($LogicalID) {
-            case 'refresh_all':
+            case 'refresh':
                 log::add('MPD', 'debug', 'execute ' . $this->getName() . ' logicalID ' . $LogicalID);
                 unset($command);
                 $command = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(), 'current');
@@ -670,7 +670,7 @@ class MPDCmd extends cmd
                 }
                 $result = $eqLogic->call_mpc('play 1');
                 unset($command);
-                $command = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(), 'refresh_all');
+                $command = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(), 'refresh');
                 if (is_object($command)) {
                     $command->execCmd();
                 }
@@ -695,7 +695,7 @@ class MPDCmd extends cmd
                         log::add('MPD', 'debug', 'song ' . $value . ' trouvé dans la queue de MPD');
                         $result = $eqLogic->call_mpc('play ' . ($i + 1));
                         unset($command);
-                        $command = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(), 'refresh_all');
+                        $command = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(), 'refresh');
                         if (is_object($command)) {
                             $command->execCmd();
                         }
@@ -715,7 +715,7 @@ class MPDCmd extends cmd
                 $result = $eqLogic->call_mpc($request);
                 if ($LogicalID === 'prev' || $LogicalID === 'next') {
                     unset($command);
-                    $command = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(), 'refresh_all');
+                    $command = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(), 'refresh');
                     if (is_object($command)) {
                         $command->execCmd();
                     }
