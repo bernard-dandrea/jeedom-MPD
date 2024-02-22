@@ -70,4 +70,20 @@ La présentation est réalisée à l'aide de la fonction Disposition de l'équip
 
 ![MPD_Widget_Favoris](../images/MPD_Widget_Favoris.png)
 
-En modifiant, la présentation, on peut ajouter des racourcis.
+En modifiant, la présentation, on peut ajouter des racourcis. 
+
+Cliquer sur le bouton de mise à jour (en haut à gauche du widget), afin d'actualiser les playlists, songs et la song en cours de lecture.
+
+# Pilotage du lecteur audio à partir d'un Mi Cube
+
+![MPD_micube](../images/MPD_micube.png)
+
+En utilisant les scénarios, il est possible de piloter son lecteur audio sans utiliser l'interface de Jeedom, à partir d'un périphérique de commande comme le Mi Cube de Xiaomi par exemple.
+
+![MPD_micube_song](../images/MPD_micube_song.png)
+
+Le scenario ci-dessus, activé sur le changement d'état de #[Aucun][Cube][side]#, permet de changer la station radio, en changeant le coté du Mi Cube.
+
+![MPD_micube_toggle](../images/MPD_micube_toggle.png)
+
+Le scenario ci-dessus, activé sur le changement d'état de #[Aucun][Cube][button]#, permet d'arrêter et redémarrer la chanson en secouant le Mi Cube.
