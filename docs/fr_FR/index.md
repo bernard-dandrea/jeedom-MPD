@@ -62,7 +62,7 @@ La commande 'Créer une commande' permet d'ajouter une action, par exemple pour 
 
 ![MPD_Widget](../images/MPD_Widget.png)
 
-La présentation créée par défaut permet d'exécuter les fonctions de base. Noter le bouton 'refresh' (en haut à gauche du widget) qui permet d'actualiser l'état du lecteur MPD (playlists, song en cours, ...). En sélectionnant une playlist, on initialise la Queue de MPD avec les Songs correspondantes. La sélection d'une Song permet de la jouer.
+La présentation créée par défaut permet d'exécuter les fonctions de base. Noter le bouton 'refresh' (en haut à droite du widget) qui permet d'actualiser l'état du lecteur MPD (playlists, song en cours, ...). En sélectionnant une playlist, on initialise la Queue de MPD avec les Songs correspondantes. La sélection d'une Song permet de la jouer.
 
 ![MPD_Equipement_Disposition](../images/MPD_Equipement_Disposition.png)
 
