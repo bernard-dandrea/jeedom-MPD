@@ -1,5 +1,7 @@
 <?php
 
+// Last Modified : 2025/09/17 15:56:41
+
 /* This file is part of Jeedom.
  *
  * Jeedom is free software: you can redistribute it and/or modify
@@ -44,12 +46,12 @@ class MPD extends eqLogic
         }
 
         $request = 'mpc  ' . $ip . $port . $password . ' ' . $_command . ' 2>&1';
-        //     $request_shell = new com_shell($request );
-        //     $result = $request_shell->exec();
-        //$result=shell_exec($request );
 
         exec($request, $result);
-
+        // pour éviter les warnings PHP si l exec ne retourne pas un tableau
+        if (is_array($result)==false) {
+            $result=array($result);
+        }
         log::add('MPD', 'debug', 'call_mpc ' . ' request ' . $request . ' result ' . $result[0]) ;
 
         return $result;
