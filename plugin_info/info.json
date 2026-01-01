@@ -18,10 +18,10 @@
     "hasDependency": true,
     "hasOwnDeamon": false,
     "maxDependancyInstallTime": 30,
-	"changelog" : "https://bernard-dandrea.github.io/jeedom-MPD/#language#/changelog",
-	"documentation" : "https://bernard-dandrea.github.io/jeedom-MPD/#language#/",
-	"changelog_beta" : "https://bernard-dandrea.github.io/jeedom-MPD/#language#/changelog",
-	"documentation_beta" : "https://bernard-dandrea.github.io/jeedom-MPD/#language#/index",
+	"changelog" : "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/changelog",
+	"documentation" : "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/index",
+	"changelog_beta" : "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/changelog_beta",
+	"documentation_beta" : "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/index_beta",
 	"link" : {
 	},
 	"language": [
@@ -38,3 +38,6 @@
 		"atlas"
 	]
 }
+
+
+

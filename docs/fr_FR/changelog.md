@@ -1,8 +1,9 @@
 # Changelog plugin MPD
 
->**IMPORTANT**
->
->S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
+# 01/01/2026
+
+- correction warnings PHP
+- Déplacement de la documentation dans un repository github séparé afin de pouvoir mettre à jour la documentation sans générer un update du plugin
 
 # 22/02/2024
 
