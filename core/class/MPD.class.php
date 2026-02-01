@@ -1,6 +1,6 @@
 <?php
 
-// Last Modified : 2025/12/02 18:01:44
+// Last Modified : 2026/02/01 17:04:14
 
 /* This file is part of Jeedom.
  *
@@ -66,28 +66,13 @@ class MPD extends eqLogic
         $result = $this->call_mpc($request);
 
         if (strpos($result[0], 'version') !== false) {
-
-            log::add('MPD', 'debug', 'Connexion OK : ' . $result[0]);
-
-            event::add(
-                'jeedom::alert',
-                array(
-                    'level' => 'success',
-                    'page' => 'MPD',
-                    'message' => __('Connexion OK : ' . $result[0], __FILE__),
-                )
-            );
+            $msg = __('Connexion OK: ', __FILE__);
         } else {
-            log::add('MPD', 'debug', 'Connexion KO ' . $result[0]);
-            event::add(
-                'jeedom::alert',
-                array(
-                    'level' => 'error',
-                    'page' => 'MPD',
-                    'message' => __('Connexion KO : ' . $result[0], __FILE__),
-                )
-            );
+            $msg = __('Connexion KO: ', __FILE__);
         }
+        $msg .= ' ' .  $result[0];
+        log::add('MPD', 'debug', $msg);
+        return $msg;
     }
 
     public function generer_commandes()
@@ -673,7 +658,7 @@ class MPDCmd extends cmd
 
                 $request = 'current -f %file%';
                 $result = $eqLogic->call_mpc($request);
-                if (isset($result[0]) &&  $result[0]== $value) {
+                if (isset($result[0]) &&  $result[0] == $value) {
                     log::add('MPD', 'debug', 'song ' . $value . ' déjà en cours');
                     return true;
                 }
