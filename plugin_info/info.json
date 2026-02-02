@@ -1,31 +1,32 @@
 {
-	"id" : "MPD",
-	"name" : "MPD",
-	"specialAttributes" : {
-		"object" : {
-
-		},
-		"user" : {
-		}
+	"id": "MPD",
+	"name": "MPD",
+	"specialAttributes": {
+		"object": {},
+		"user": {}
 	},
-	"description" : {
+	"description": {
 		"fr_FR": "Plugin permettant de controler les lecteurs MPD"
 	},
-	"licence" : "AGPL",
-	"author" : "Bernard Dandrea",
-	"require" : "4.2.0",
-	"category" : "multimedia",
-    "hasDependency": true,
-    "hasOwnDeamon": false,
-    "maxDependancyInstallTime": 30,
-	"changelog" : "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/changelog",
-	"documentation" : "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/index",
-	"changelog_beta" : "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/changelog_beta",
-	"documentation_beta" : "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/index_beta",
-	"link" : {
-	},
+	"licence": "AGPL",
+	"author": "Bernard Dandrea",
+	"require": "4.2.0",
+	"category": "multimedia",
+	"hasDependency": true,
+	"hasOwnDeamon": false,
+	"maxDependancyInstallTime": 30,
+	"changelog": "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/changelog",
+	"documentation": "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/index",
+	"changelog_beta": "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/changelog_beta",
+	"documentation_beta": "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/index_beta",
+	"link": {},
 	"language": [
-		"fr_FR"
+		"de_DE",
+		"en_US",
+		"es_ES",
+		"fr_FR",
+		"it_IT",
+		"pt_PT"
 	],
 	"compatibility": [
 		"miniplus",
@@ -38,6 +39,3 @@
 		"atlas"
 	]
 }
-
-
-
