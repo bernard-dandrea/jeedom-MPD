@@ -6,12 +6,9 @@
     },
     "plugins\/MPD\/core\/class\/MPD.class.php": {
         " commande ": " command ",
-        "Connexion KO: ": "connection KO: ",
+        "Connexion KO: ": "Connection KO: ",
         "Connexion OK: ": "Connection OK: ",
-        "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipment disabled, unable to execute command: ",
-        "generer_commandes ": "generate_orders ",
-        "set_layout ": "set_layout ",
-        "test_connexion ": "connection_test "
+        "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipment disabled, unable to execute command: "
     },
     "plugins\/MPD\/desktop\/js\/MPD.js": {
         "Action": "Action",
@@ -56,6 +53,7 @@
         "Equipement non visible": "Non-visible equipment",
         "Equipement visible": "Visible equipment",
         "Gestion": "Management",
+        "Générer les commandes": "Generate commands",
         "Mes MPDs": "My MPDs",
         "Mot de passe": "Password",
         "Nom du MPD": "MPD name",
@@ -66,7 +64,7 @@
         "Rechercher": "Search",
         "Sauvegarder": "Save",
         "Supprimer": "Delete",
-        "Tester la connexion au MPD": "Test MPD connection",
+        "Tester la connexion au MPD": "Test the connection to the MPD",
         "Visible": "Visible"
     }
 }

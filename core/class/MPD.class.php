@@ -1,6 +1,6 @@
 <?php
 
-// Last Modified : 2026/02/01 19:03:54
+// Last Modified : 2026/02/02 14:01:15
 
 /* This file is part of Jeedom.
  *
@@ -60,7 +60,7 @@ class MPD extends eqLogic
     public function test_connexion()
     {
 
-        log::add('MPD', 'info', __('test_connexion ', __FILE__));
+        log::add('MPD', 'info', 'test_connexion ');
 
         $request = 'version';
         $result = $this->call_mpc($request);
@@ -77,7 +77,7 @@ class MPD extends eqLogic
 
     public function generer_commandes()
     {
-        log::add('MPD', 'info', __('generer_commandes ', __FILE__));
+        log::add('MPD', 'info','generer_commandes');
 
         $order = time();
         $update_eqlogic = false;
@@ -89,7 +89,7 @@ class MPD extends eqLogic
             unset($command);
             $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
             if (!is_object($command)) {
-                log::add('MPD', 'info', __('generer_commandes ', __FILE__) .  __(' commande ', __FILE__) . $name);
+                log::add('MPD', 'info', 'generer_commandes ' .  __(' commande ', __FILE__) . $name);
                 $command = new MPDCmd();
                 $command->setLogicalId($logicalID);
                 $command->setIsVisible(1);
@@ -114,7 +114,7 @@ class MPD extends eqLogic
             unset($command);
             $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
             if (!is_object($command)) {
-                log::add('MPD', 'info', __('generer_commandes ', __FILE__) .  __(' commande ', __FILE__) . $name);
+                log::add('MPD', 'info', 'generer_commandes ' .  __(' commande ', __FILE__) . $name);
                 $command = new MPDCmd();
                 $command->setLogicalId($logicalID);
                 $command->setIsVisible(1);
@@ -139,7 +139,7 @@ class MPD extends eqLogic
             unset($command);
             $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
             if (!is_object($command)) {
-                log::add('MPD', 'info', __('generer_commandes ', __FILE__) .  __(' commande ', __FILE__) . $name);
+                log::add('MPD', 'info', 'generer_commandes ' .  __(' commande ', __FILE__) . $name);
                 $command = new MPDCmd();
                 $command->setLogicalId($logicalID);
                 $command->setIsVisible(1);
@@ -164,7 +164,7 @@ class MPD extends eqLogic
             unset($command);
             $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
             if (!is_object($command)) {
-                log::add('MPD', 'info', __('generer_commandes ', __FILE__) .  __(' commande ', __FILE__) . $name);
+                log::add('MPD', 'info', 'generer_commandes ' .  __(' commande ', __FILE__) . $name);
                 $command = new MPDCmd();
                 $command->setLogicalId($logicalID);
                 $command->setIsVisible(1);
@@ -190,7 +190,7 @@ class MPD extends eqLogic
             unset($command);
             $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
             if (!is_object($command)) {
-                log::add('MPD', 'info', __('generer_commandes ', __FILE__) .  __(' commande ', __FILE__) . $name);
+                log::add('MPD', 'info', 'generer_commandes ' .  __(' commande ', __FILE__) . $name);
                 $command = new MPDCmd();
                 $command->setLogicalId($logicalID);
                 $command->setIsVisible(1);
@@ -215,7 +215,7 @@ class MPD extends eqLogic
             unset($command);
             $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
             if (!is_object($command)) {
-                log::add('MPD', 'info', __('generer_commandes ', __FILE__) .  __(' commande ', __FILE__) . $name);
+                log::add('MPD', 'info', 'generer_commandes ' .  __(' commande ', __FILE__) . $name);
                 $command = new MPDCmd();
                 $command->setLogicalId($logicalID);
                 $command->setIsVisible(1);
@@ -241,7 +241,7 @@ class MPD extends eqLogic
             unset($command);
             $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
             if (!is_object($command)) {
-                log::add('MPD', 'info', __('generer_commandes ', __FILE__) .  __(' commande ', __FILE__) . $name);
+                log::add('MPD', 'info', 'generer_commandes ' .  __(' commande ', __FILE__) . $name);
                 $command = new MPDCmd();
                 $command->setLogicalId($logicalID);
                 $command->setIsVisible(1);
@@ -266,7 +266,7 @@ class MPD extends eqLogic
             unset($command);
             $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
             if (!is_object($command)) {
-                log::add('MPD', 'info', __('generer_commandes ', __FILE__) .  __(' commande ', __FILE__) . $name);
+                log::add('MPD', 'info', 'generer_commandes ' .  __(' commande ', __FILE__) . $name);
                 $command = new MPDCmd();
                 $command->setLogicalId($logicalID);
                 $command->setIsVisible(1);
@@ -291,7 +291,7 @@ class MPD extends eqLogic
             unset($command);
             $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
             if (!is_object($command)) {
-                log::add('MPD', 'info', __('generer_commandes ', __FILE__) .  __(' commande ', __FILE__) . $name);
+                log::add('MPD', 'info', 'generer_commandes ' .  __(' commande ', __FILE__) . $name);
                 $command = new MPDCmd();
                 $command->setLogicalId($logicalID);
                 $command->setIsVisible(1);
@@ -317,7 +317,7 @@ class MPD extends eqLogic
             unset($command);
             $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
             if (!is_object($command)) {
-                log::add('MPD', 'info', __('generer_commandes ', __FILE__) .  __(' commande ', __FILE__) . $name);
+                log::add('MPD', 'info', 'generer_commandes ' .  __(' commande ', __FILE__) . $name);
                 $command = new MPDCmd();
                 $command->setLogicalId($logicalID);
                 $command->setIsVisible(1);
@@ -342,7 +342,7 @@ class MPD extends eqLogic
             unset($command);
             $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
             if (!is_object($command)) {
-                log::add('MPD', 'info', __('generer_commandes ', __FILE__) .  __(' commande ', __FILE__) . $name);
+                log::add('MPD', 'info', 'generer_commandes ' .  __(' commande ', __FILE__) . $name);
                 $command = new MPDCmd();
                 $command->setLogicalId($logicalID);
                 $command->setIsVisible(0);
@@ -363,7 +363,7 @@ class MPD extends eqLogic
             unset($command);
             $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
             if (!is_object($command)) {
-                log::add('MPD', 'info', __('generer_commandes ', __FILE__) .  __(' commande ', __FILE__) . $name);
+                log::add('MPD', 'info', 'generer_commandes ' .  __(' commande ', __FILE__) . $name);
                 $command = new MPDCmd();
                 $command->setLogicalId($logicalID);
                 $command->setIsVisible(0);
@@ -384,7 +384,7 @@ class MPD extends eqLogic
             unset($command);
             $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
             if (!is_object($command)) {
-                log::add('MPD', 'info', __('generer_commandes ', __FILE__) .  __(' commande ', __FILE__) . $name);
+                log::add('MPD', 'info', 'generer_commandes ' .  __(' commande ', __FILE__) . $name);
                 $command = new MPDCmd();
                 $command->setLogicalId($logicalID);
                 $command->setIsVisible(1);
@@ -409,7 +409,7 @@ class MPD extends eqLogic
             unset($command);
             $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
             if (!is_object($command)) {
-                log::add('MPD', 'info', __('generer_commandes ', __FILE__) .  __(' commande ', __FILE__) . $name);
+                log::add('MPD', 'info', 'generer_commandes ' .  __(' commande ', __FILE__) . $name);
                 $command = new MPDCmd();
                 $command->setLogicalId($logicalID);
                 $command->setIsVisible(1);
@@ -434,7 +434,7 @@ class MPD extends eqLogic
             unset($command);
             $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
             if (!is_object($command)) {
-                log::add('MPD', 'info', __('generer_commandes ', __FILE__) .  __(' commande ', __FILE__) . $name);
+                log::add('MPD', 'info', 'generer_commandes ' .  __(' commande ', __FILE__) . $name);
                 $command = new MPDCmd();
                 $command->setLogicalId($logicalID);
                 $command->setIsVisible(1);
@@ -462,7 +462,7 @@ class MPD extends eqLogic
     }
     public function set_layout()
     {
-        log::add('MPD', 'info', __('set_layout ', __FILE__));
+        log::add('MPD', 'info', 'set_layout ');
 
         $this->setDisplay('layout::dashboard', 'table');
         $this->setDisplay(
