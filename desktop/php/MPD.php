@@ -102,7 +102,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
                 <label class="col-sm-4 control-label">{{Nom du MPD}}</label>
                 <div class="col-sm-6">
                   <input type="text" class="eqLogicAttr form-control" data-l1key="id" style="display:none;">
-                  <input type="text" class="eqLogicAttr form-control" data-l1key="name" placeholder="{{Nom de l'MPD}}">
+                  <input type="text" class="eqLogicAttr form-control" data-l1key="name" placeholder="{{Nom du MPD}}">
                 </div>
               </div>
               <div class="form-group">
@@ -145,8 +145,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
                 <label class="col-sm-4 control-label"></label>
                 <div class="col-sm-4">
                   <a class="btn btn-default " id="bt_TestConnexionMPD" '><i class="fa fa-cogs"> {{Tester la connexion au MPD}}</i></a>
-                  <a class="btn btn-default " id="bt_Generer_Commandes" '><i class="fa fa-cogs"> {{Générer les
-                      commandes}}</i></a>
+                  <a class="btn btn-default " id="bt_Generer_Commandes" '><i class="fa fa-cogs"> {{Générer les commandes}}</i></a>
                 </div>
               </div>
 
