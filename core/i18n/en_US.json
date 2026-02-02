@@ -1,6 +1,17 @@
 {
     "plugins\/MPD\/core\/ajax\/MPD.ajax.php": {
-        "401 - Accès non autorisé": "401 - Unauthorized access"
+        "401 - Accès non autorisé": "401 - Unauthorized access",
+        "Aucune méthode correspondante à": "No matching method for",
+        "MPD eqLogic non trouvé : ": "MPD eqLogic not found: "
+    },
+    "plugins\/MPD\/core\/class\/MPD.class.php": {
+        " commande ": " command ",
+        "Connexion KO: ": "KO connection: ",
+        "Connexion OK: ": "Connection OK: ",
+        "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipment disabled, unable to execute command: ",
+        "generer_commandes ": "generate_orders ",
+        "set_layout ": "set_layout ",
+        "test_connexion ": "connection_test "
     },
     "plugins\/MPD\/desktop\/js\/MPD.js": {
         "Action": "Action",
@@ -9,6 +20,7 @@
         "Choisir une icône": "Choose an icon",
         "Commande": "Command",
         "Commande d\\'information à mettre à jour": "Information command to update",
+        "Commande info liée": "Related info command",
         "Durée avant retour d\\'état (min)": "Duration before status return (min)",
         "Historiser": "Historize",
         "Id": "ID",
@@ -19,6 +31,7 @@
         "Max": "Maximum",
         "Min": "Minimum",
         "Nom": "Name",
+        "Nom de la commande": "Name of the command",
         "Options": "Options",
         "Paramètres": "Settings",
         "Tester": "Test",
@@ -30,21 +43,31 @@
     "plugins\/MPD\/desktop\/php\/MPD.php": {
         "401 - Accès non autorisé": "401 - Unauthorized access",
         "Activer": "Enable",
+        "Adresse IP": "IP address",
         "Ajouter": "Add",
         "Aucun": "None",
+        "Aucun équipement MPD trouvé, cliquer sur \"Ajouter\" pour commencer": "No MPD equipment found, click \"Add\" to begin",
         "Catégorie": "Category",
         "Commandes": "Commands",
         "Configuration": "Configuration",
         "Configuration avancée": "Advanced configuration",
+        "Créer une commande": "Create a command",
         "Equipement": "Equipment",
+        "Equipement non visible": "Non-visible equipment",
+        "Equipement visible": "Visible equipment",
         "Gestion": "Management",
+        "Mes MPDs": "My MPDs",
         "Mot de passe": "Password",
+        "Nom de l'MPD": "Name of the MPD",
+        "Nom du MPD": "MPD name",
         "Objet parent": "Parent object",
         "Options": "Options",
+        "Paramètres généraux": "General settings",
         "Port": "Harbor",
         "Rechercher": "Search",
         "Sauvegarder": "Save",
         "Supprimer": "Delete",
+        "Tester la connexion au MPD": "Test the connection to the MPD",
         "Visible": "Visible"
     }
 }

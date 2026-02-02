@@ -6,7 +6,12 @@
 		"user": {}
 	},
 	"description": {
-		"fr_FR": "Plugin permettant de controler les lecteurs MPD"
+		"fr_FR": "Plugin permettant de controler les lecteurs MPD",
+		"en_US": "Plugin for controlling MPD players",
+		"es_ES": "Complemento que permite controlar los reproductores MPD",
+		"de_DE": "Plugin zur Steuerung von MPD-Playern",
+		"it_IT": "Plugin che consente di controllare i lettori MPD",
+		"pt_PT": "Plugin que permite controlar os leitores MPD"
 	},
 	"licence": "AGPL",
 	"author": "Bernard Dandrea",
