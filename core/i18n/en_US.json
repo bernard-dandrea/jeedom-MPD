@@ -6,7 +6,7 @@
     },
     "plugins\/MPD\/core\/class\/MPD.class.php": {
         " commande ": " command ",
-        "Connexion KO: ": "KO connection: ",
+        "Connexion KO: ": "Connection KO: ",
         "Connexion OK: ": "Connection OK: ",
         "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipment disabled, unable to execute command: "
     },
@@ -32,7 +32,7 @@
         "Options": "Options",
         "Paramètres": "Settings",
         "Tester": "Test",
-        "Type": "Kind",
+        "Type": "Type",
         "Unité": "Unit",
         "Valeur": "Value",
         "Valeur retour d\\'état": "Status return value"
@@ -60,7 +60,7 @@
         "Objet parent": "Parent object",
         "Options": "Options",
         "Paramètres généraux": "General settings",
-        "Port": "Harbor",
+        "Port": "Port",
         "Rechercher": "Search",
         "Sauvegarder": "Save",
         "Supprimer": "Delete",
