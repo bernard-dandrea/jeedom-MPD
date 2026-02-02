@@ -9,9 +9,7 @@
         "Connexion KO: ": "Ligação KO: ",
         "Connexion OK: ": "Ligação OK: ",
         "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipamento desativado impossível executar o comando: ",
-        "generer_commandes ": "gerar_comandos ",
-        "set_layout ": "definir layout ",
-        "test_connexion ": "teste_conexão "
+        "generer_commandes ": "gerar_comandos "
     },
     "plugins\/MPD\/desktop\/js\/MPD.js": {
         "Action": "Ação",
