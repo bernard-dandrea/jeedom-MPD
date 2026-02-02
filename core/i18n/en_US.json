@@ -9,7 +9,6 @@
         "Connexion KO: ": "connection KO: ",
         "Connexion OK: ": "Connection OK: ",
         "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipment disabled, unable to execute command: ",
-        "generer_commandes ": "generate_orders "
     },
     "plugins\/MPD\/desktop\/js\/MPD.js": {
         "Action": "Action",
@@ -29,7 +28,7 @@
         "Max": "Maximum",
         "Min": "Minimum",
         "Nom": "Name",
-        "Nom de la commande": "Name of the command",
+        "Nom de la commande": "Command Name",
         "Options": "Options",
         "Paramètres": "Settings",
         "Tester": "Test",
