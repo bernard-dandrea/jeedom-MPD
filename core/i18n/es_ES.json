@@ -1,0 +1,50 @@
+{
+    "plugins\/MPD\/core\/ajax\/MPD.ajax.php": {
+        "401 - Accès non autorisé": "401 - Acceso no autorizado"
+    },
+    "plugins\/MPD\/desktop\/js\/MPD.js": {
+        "Action": "Acción",
+        "Afficher": "Mostrar",
+        "Aucune": "Alguna",
+        "Choisir une icône": "Elija el icono",
+        "Commande": "Ordenado",
+        "Commande d\\'information à mettre à jour": "Información del pedido para actualizar",
+        "Durée avant retour d\\'état (min)": "Duración antes de la devolución del estado (min)",
+        "Historiser": "Guardar historial",
+        "Id": "IDENTIFICACIÓN",
+        "Inverser": "Invertir",
+        "La valeur de la commande vaut par défaut la commande": "El valor del comando es por defecto el comando",
+        "Liste": "Listado",
+        "Liste de valeur|texte séparé par ;": "Lista de valores|texto separados por;",
+        "Max": "Máx.",
+        "Min": "Mínimo",
+        "Nom": "Nombre",
+        "Options": "Opciones",
+        "Paramètres": "Parámetros",
+        "Tester": "Probar",
+        "Type": "Tipo",
+        "Unité": "Unidad",
+        "Valeur": "Valor",
+        "Valeur retour d\\'état": "Valor de retorno de estado"
+    },
+    "plugins\/MPD\/desktop\/php\/MPD.php": {
+        "401 - Accès non autorisé": "401 - Acceso no autorizado",
+        "Activer": "Activar",
+        "Ajouter": "Agregar",
+        "Aucun": "Ninguno",
+        "Catégorie": "Categoría",
+        "Commandes": "Comandos",
+        "Configuration": "Configuración ",
+        "Configuration avancée": "Configuración avanzada",
+        "Equipement": "Dispositivos",
+        "Gestion": "Administración",
+        "Mot de passe": "Contraseña",
+        "Objet parent": "Objeto padre",
+        "Options": "Opciones",
+        "Port": "Puerto",
+        "Rechercher": "Buscar",
+        "Sauvegarder": "Para salvaguardar",
+        "Supprimer": "Eliminar",
+        "Visible": "Visible"
+    }
+}

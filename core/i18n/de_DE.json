@@ -1,0 +1,50 @@
+{
+    "plugins\/MPD\/core\/ajax\/MPD.ajax.php": {
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff"
+    },
+    "plugins\/MPD\/desktop\/js\/MPD.js": {
+        "Action": "Aktion",
+        "Afficher": "Anzeige",
+        "Aucune": "Irgendein",
+        "Choisir une icône": "Wählen Sie ein Symbol",
+        "Commande": "Bestellt",
+        "Commande d\\'information à mettre à jour": "Bestellinformationen zu aktualisieren",
+        "Durée avant retour d\\'état (min)": "Dauer vor Statusrückgabe (min)",
+        "Historiser": "Chronik",
+        "Id": "ICH WÜRDE",
+        "Inverser": "Umgekehrt",
+        "La valeur de la commande vaut par défaut la commande": "Der Wert des Befehls ist standardmäßig der Befehl",
+        "Liste": "Auflistung",
+        "Liste de valeur|texte séparé par ;": "Werteliste|Text getrennt durch;",
+        "Max": "Max",
+        "Min": "Minimum",
+        "Nom": "Name",
+        "Options": "Optionen",
+        "Paramètres": "Die Einstellungen",
+        "Tester": "Prüfung",
+        "Type": "Typ",
+        "Unité": "Unit",
+        "Valeur": "Wert",
+        "Valeur retour d\\'état": "Statusrückgabewert"
+    },
+    "plugins\/MPD\/desktop\/php\/MPD.php": {
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "Activer": "Aktivieren",
+        "Ajouter": "Addieren",
+        "Aucun": "Nein",
+        "Catégorie": "Kategorie",
+        "Commandes": "Befehle",
+        "Configuration": "Konfiguration",
+        "Configuration avancée": "Erweiterte Konfiguration",
+        "Equipement": "Gerät",
+        "Gestion": "Management",
+        "Mot de passe": "Passwort",
+        "Objet parent": "Übergeordnetes Objekt",
+        "Options": "Optionen",
+        "Port": "Hafen",
+        "Rechercher": "Suchen nach",
+        "Sauvegarder": "Zu schützen",
+        "Supprimer": "Entfernen",
+        "Visible": "Sichtbar"
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "plugins\/MPD\/core\/ajax\/MPD.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accesso non autorizzato"
+    },
+    "plugins\/MPD\/desktop\/js\/MPD.js": {
+        "Action": "Azione",
+        "Afficher": "Mostra",
+        "Aucune": "Aucune",
+        "Choisir une icône": "Seleziona un\\'icona",
+        "Commande": "Commande",
+        "Commande d\\'information à mettre à jour": "Commande d\\'information à mettre à jour",
+        "Durée avant retour d\\'état (min)": "Durée avant retour d\\'état (min)",
+        "Historiser": "Storicizza",
+        "Id": "Id",
+        "Inverser": "Inverti",
+        "La valeur de la commande vaut par défaut la commande": "La valeur de la commande vaut par défaut la commande",
+        "Liste": "Liste",
+        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
+        "Max": "Max",
+        "Min": "Min",
+        "Nom": "Nome",
+        "Options": "Opzioni",
+        "Paramètres": "Impostazioni",
+        "Tester": "Prova",
+        "Type": "Tipo",
+        "Unité": "Unità",
+        "Valeur": "Valore",
+        "Valeur retour d\\'état": "Valeur retour d\\'état"
+    },
+    "plugins\/MPD\/desktop\/php\/MPD.php": {
+        "401 - Accès non autorisé": "401 - Accesso non autorizzato",
+        "Activer": "Attivare",
+        "Ajouter": "Ajouter",
+        "Aucun": "Nessuno",
+        "Catégorie": "Categoria",
+        "Commandes": "Comandi",
+        "Configuration": "Configurazione",
+        "Configuration avancée": "Configurazione avanzata",
+        "Equipement": "Dispositivo",
+        "Gestion": "Gestione",
+        "Mot de passe": "Password",
+        "Objet parent": "Oggetto padre",
+        "Options": "Opzioni",
+        "Port": "Porta",
+        "Rechercher": "Ricercare",
+        "Sauvegarder": "Sauvegarder",
+        "Supprimer": "Supprimer",
+        "Visible": "Visibile"
+    }
+}
