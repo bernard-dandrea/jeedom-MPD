@@ -1,6 +1,17 @@
 {
     "plugins\/MPD\/core\/ajax\/MPD.ajax.php": {
-        "401 - Accès non autorisé": "401 - Acesso não autorizado"
+        "401 - Accès non autorisé": "401 - Acesso não autorizado",
+        "Aucune méthode correspondante à": "Nenhum método correspondente a",
+        "MPD eqLogic non trouvé : ": "MPD eqLogic não encontrado: "
+    },
+    "plugins\/MPD\/core\/class\/MPD.class.php": {
+        " commande ": " controlo ",
+        "Connexion KO: ": "Ligação KO: ",
+        "Connexion OK: ": "Ligação OK: ",
+        "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipamento desativado impossível executar o comando: ",
+        "generer_commandes ": "gerar_comandos ",
+        "set_layout ": "definir layout ",
+        "test_connexion ": "teste_conexão "
     },
     "plugins\/MPD\/desktop\/js\/MPD.js": {
         "Action": "Ação",
@@ -9,6 +20,7 @@
         "Choisir une icône": "Escolha um ícone",
         "Commande": "Ordenado",
         "Commande d\\'information à mettre à jour": "Informações do pedido para atualizar",
+        "Commande info liée": "Comando de informação relacionada",
         "Durée avant retour d\\'état (min)": "Duração antes do retorno do status (min)",
         "Historiser": "Histórico",
         "Id": "EU IRIA",
@@ -19,6 +31,7 @@
         "Max": "Máx.",
         "Min": "Mínimo",
         "Nom": "Nome",
+        "Nom de la commande": "Nome do comando",
         "Options": "Opções",
         "Paramètres": "Parâmetros",
         "Tester": "Testar",
@@ -30,21 +43,31 @@
     "plugins\/MPD\/desktop\/php\/MPD.php": {
         "401 - Accès non autorisé": "401 - Acesso não autorizado",
         "Activer": "Ativar",
+        "Adresse IP": "Endereço IP",
         "Ajouter": "Adicionar",
         "Aucun": "Nenhum",
+        "Aucun équipement MPD trouvé, cliquer sur \"Ajouter\" pour commencer": "Nenhum equipamento MPD encontrado, clique em \"Adicionar\" para começar",
         "Catégorie": "Categoria",
         "Commandes": "Comandos",
         "Configuration": "Configuração",
         "Configuration avancée": "Configuração avançada",
+        "Créer une commande": "Criar um comando",
         "Equipement": "Equipamento",
+        "Equipement non visible": "Equipamento não visível",
+        "Equipement visible": "Equipamento visível",
         "Gestion": "Gestão",
+        "Mes MPDs": "Os meus MPDs",
         "Mot de passe": "Password",
+        "Nom de l'MPD": "Nome do MPD",
+        "Nom du MPD": "Nome do MPD",
         "Objet parent": "Objeto pai",
         "Options": "Opções",
+        "Paramètres généraux": "Parâmetros gerais",
         "Port": "Porta",
         "Rechercher": "Pesquisar",
         "Sauvegarder": "Guardar",
         "Supprimer": "Eliminar",
+        "Tester la connexion au MPD": "Testar a ligação ao MPD",
         "Visible": "Visível"
     }
 }
