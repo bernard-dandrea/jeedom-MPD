@@ -9,9 +9,7 @@
         "Connexion KO: ": "Conexión KO: ",
         "Connexion OK: ": "Conexión correcta: ",
         "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipo desactivado, imposible ejecutar el comando: ",
-        "generer_commandes ": "generar_comandos ",
-        "set_layout ": "set_layout ",
-        "test_connexion ": "prueba_conexión "
+        "generer_commandes ": "generar_comandos "
     },
     "plugins\/MPD\/desktop\/js\/MPD.js": {
         "Action": "Acción",
