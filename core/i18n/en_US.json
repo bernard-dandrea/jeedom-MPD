@@ -6,9 +6,9 @@
     },
     "plugins\/MPD\/core\/class\/MPD.class.php": {
         " commande ": " command ",
-        "Connexion KO: ": "connection KO: ",
+        "Connexion KO: ": "KO connection: ",
         "Connexion OK: ": "Connection OK: ",
-        "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipment disabled, unable to execute command: ",
+        "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipment disabled, unable to execute command: "
     },
     "plugins\/MPD\/desktop\/js\/MPD.js": {
         "Action": "Action",
@@ -28,11 +28,11 @@
         "Max": "Maximum",
         "Min": "Minimum",
         "Nom": "Name",
-        "Nom de la commande": "Command Name",
+        "Nom de la commande": "Name of the command",
         "Options": "Options",
         "Paramètres": "Settings",
         "Tester": "Test",
-        "Type": "Type",
+        "Type": "Kind",
         "Unité": "Unit",
         "Valeur": "Value",
         "Valeur retour d\\'état": "Status return value"
@@ -53,18 +53,18 @@
         "Equipement non visible": "Non-visible equipment",
         "Equipement visible": "Visible equipment",
         "Gestion": "Management",
+        "Générer les commandes": "Generate commands",
         "Mes MPDs": "My MPDs",
         "Mot de passe": "Password",
-        "Nom de l'MPD": "Name of the MPD",
         "Nom du MPD": "MPD name",
         "Objet parent": "Parent object",
         "Options": "Options",
         "Paramètres généraux": "General settings",
-        "Port": "Port",
+        "Port": "Harbor",
         "Rechercher": "Search",
         "Sauvegarder": "Save",
         "Supprimer": "Delete",
-        "Tester la connexion au MPD": "Test MPD connection",
+        "Tester la connexion au MPD": "Test the connection to the MPD",
         "Visible": "Visible"
     }
 }
