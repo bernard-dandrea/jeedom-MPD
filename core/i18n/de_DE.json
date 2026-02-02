@@ -8,8 +8,7 @@
         " commande ": " Steuerung ",
         "Connexion KO: ": "KO-Verbindung: ",
         "Connexion OK: ": "Verbindung OK: ",
-        "Equipement desactivé impossible d\\éxecuter la commande : ": "Gerät deaktiviert, Befehl kann nicht ausgeführt werden: ",
-        "generer_commandes ": "generer_commandes "
+        "Equipement desactivé impossible d\\éxecuter la commande : ": "Gerät deaktiviert, Befehl kann nicht ausgeführt werden: "
     },
     "plugins\/MPD\/desktop\/js\/MPD.js": {
         "Action": "Aktion",
@@ -54,9 +53,9 @@
         "Equipement non visible": "Nicht sichtbare Ausstattung",
         "Equipement visible": "Sichtbare Ausstattung",
         "Gestion": "Management",
+        "Générer les commandes": "Aufträge generieren",
         "Mes MPDs": "Meine MPDs",
         "Mot de passe": "Passwort",
-        "Nom de l'MPD": "Name des MPD",
         "Nom du MPD": "Name des MPD",
         "Objet parent": "Übergeordnetes Objekt",
         "Options": "Optionen",

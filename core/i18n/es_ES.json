@@ -8,8 +8,7 @@
         " commande ": " control ",
         "Connexion KO: ": "Conexión KO: ",
         "Connexion OK: ": "Conexión correcta: ",
-        "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipo desactivado, imposible ejecutar el comando: ",
-        "generer_commandes ": "generar_comandos "
+        "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipo desactivado, imposible ejecutar el comando: "
     },
     "plugins\/MPD\/desktop\/js\/MPD.js": {
         "Action": "Acción",
@@ -54,9 +53,9 @@
         "Equipement non visible": "Equipo no visible",
         "Equipement visible": "Equipo visible",
         "Gestion": "Administración",
+        "Générer les commandes": "Generar pedidos",
         "Mes MPDs": "Mis MPD",
         "Mot de passe": "Contraseña",
-        "Nom de l'MPD": "Nombre del MPD",
         "Nom du MPD": "Nombre del MPD",
         "Objet parent": "Objeto padre",
         "Options": "Opciones",
