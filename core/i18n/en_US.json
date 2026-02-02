@@ -6,7 +6,7 @@
     },
     "plugins\/MPD\/core\/class\/MPD.class.php": {
         " commande ": " command ",
-        "Connexion KO: ": "KO connection: ",
+        "Connexion KO: ": "connection KO: ",
         "Connexion OK: ": "Connection OK: ",
         "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipment disabled, unable to execute command: ",
         "generer_commandes ": "generate_orders ",
@@ -35,7 +35,7 @@
         "Options": "Options",
         "Paramètres": "Settings",
         "Tester": "Test",
-        "Type": "Kind",
+        "Type": "Type",
         "Unité": "Unit",
         "Valeur": "Value",
         "Valeur retour d\\'état": "Status return value"
@@ -58,16 +58,15 @@
         "Gestion": "Management",
         "Mes MPDs": "My MPDs",
         "Mot de passe": "Password",
-        "Nom de l'MPD": "Name of the MPD",
         "Nom du MPD": "MPD name",
         "Objet parent": "Parent object",
         "Options": "Options",
         "Paramètres généraux": "General settings",
-        "Port": "Harbor",
+        "Port": "Port",
         "Rechercher": "Search",
         "Sauvegarder": "Save",
         "Supprimer": "Delete",
-        "Tester la connexion au MPD": "Test the connection to the MPD",
+        "Tester la connexion au MPD": "Test MPD connection",
         "Visible": "Visible"
     }
 }
