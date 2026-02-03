@@ -23,7 +23,7 @@ function addCmdToTable(_cmd) {
     if (document.querySelector('#table_cmd thead') == null) {
         table = '<thead>'
         table += '<tr>'
-        table += '<th>{{Id}}</th>'
+        table += '<th>Id</th>'  // BD
         table += '<th>{{Nom}}</th>'
         table += '<th>{{Type}}</th>'
         table += '<th>{{Commande}}</th>'
