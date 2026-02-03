@@ -1,0 +1,15 @@
+name: Block direct PR to main
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  block:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refuse PR vers main
+        run: |
+          echo "❌ Pull Request directement vers main interdite."
+          exit 1
