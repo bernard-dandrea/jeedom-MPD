@@ -5,7 +5,6 @@
         "MPD eqLogic non trouvé : ": "MPD eqLogic non trovato: "
     },
     "plugins\/MPD\/core\/class\/MPD.class.php": {
-        " commande ": " controllo ",
         "Connexion KO: ": "Connessione KO: ",
         "Connexion OK: ": "Connessione OK: ",
         "Equipement desactivé impossible d\\éxecuter la commande : ": "Dispositivo disattivato impossibile eseguire il comando: ",
