@@ -8,7 +8,12 @@
         " commande ": " controllo ",
         "Connexion KO: ": "Connessione KO: ",
         "Connexion OK: ": "Connessione OK: ",
-        "Equipement desactivé impossible d\\éxecuter la commande : ": "Dispositivo disattivato impossibile eseguire il comando: "
+        "Equipement desactivé impossible d\\éxecuter la commande : ": "Dispositivo disattivato impossibile eseguire il comando: ",
+        "Type d\\'action non défini": "Tipo di azione non definito",
+        "commande": "controllo",
+        "déjà en cours": "già in corso",
+        "non trouvé dans la queue de MPD": "non trovato nella coda di MPD",
+        "trouvé dans la queue de MPD": "trovato nella coda di MPD"
     },
     "plugins\/MPD\/desktop\/js\/MPD.js": {
         "Action": "Azione",

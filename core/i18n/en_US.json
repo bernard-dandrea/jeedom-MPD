@@ -8,7 +8,12 @@
         " commande ": " command ",
         "Connexion KO: ": "Connection KO: ",
         "Connexion OK: ": "Connection OK: ",
-        "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipment disabled, unable to execute command: "
+        "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipment disabled, unable to execute command: ",
+        "Type d\\'action non défini": "Type of action not defined",
+        "commande": "command",
+        "déjà en cours": "already underway",
+        "non trouvé dans la queue de MPD": "not found in the MPD queue",
+        "trouvé dans la queue de MPD": "found in the MPD queue"
     },
     "plugins\/MPD\/desktop\/js\/MPD.js": {
         "Action": "Action",
