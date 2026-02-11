@@ -8,7 +8,12 @@
         " commande ": " Steuerung ",
         "Connexion KO: ": "KO-Verbindung: ",
         "Connexion OK: ": "Verbindung OK: ",
-        "Equipement desactivé impossible d\\éxecuter la commande : ": "Gerät deaktiviert, Befehl kann nicht ausgeführt werden: "
+        "Equipement desactivé impossible d\\éxecuter la commande : ": "Gerät deaktiviert, Befehl kann nicht ausgeführt werden: ",
+        "Type d\\'action non défini": "Art der Aktion nicht definiert",
+        "commande": "Steuerung",
+        "déjà en cours": "bereits im Gange",
+        "non trouvé dans la queue de MPD": "nicht in der MPD-Warteschlange gefunden",
+        "trouvé dans la queue de MPD": "gefunden in der MPD-Warteschlange"
     },
     "plugins\/MPD\/desktop\/js\/MPD.js": {
         "Action": "Aktion",
