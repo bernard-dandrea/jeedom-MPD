@@ -1,6 +1,6 @@
 <?php
 
-// Last Modified : 2026/02/11 18:43:37
+// Last Modified : 2026/02/11 18:50:16
 
 /* This file is part of Jeedom.
  *
@@ -363,7 +363,7 @@ class MPD extends eqLogic
             unset($command);
             $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
             if (!is_object($command)) {
-                log::add('MPD', 'info', 'generer_commandes ' .  __(' commande ', __FILE__) . $name);
+                log::add('MPD', 'info', 'generer_commandes ' .  __('commande', __FILE__) . ' ' . $name);
                 $command = new MPDCmd();
                 $command->setLogicalId($logicalID);
                 $command->setIsVisible(0);
