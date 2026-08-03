@@ -177,8 +177,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
       <div role="tabpanel" class="tab-pane" id="commandtab">
         <div class="input-group pull-right" style="display:inline-flex;margin-top:5px;">
           <span class="input-group-btn">
-            <a class="btn btn-info btn-xs roundedLeft " id="bt_create_command" title=' {{Créer une commande}}'><i
-                class="fas fa-plus-circle"> {{Créer une commande}}</i></a>
+            <a class="btn btn-info btn-xs roundedLeft " id="bt_create_command" title=' {{Créer une commande}}'><i class="fas fa-plus-circle"> {{Créer une commande}}</i></a>
           </span>
         </div>
         <br><br>
@@ -188,6 +187,8 @@ $eqLogics = eqLogic::byType($plugin->getId());
         </div>
       </div><!-- /.tabpanel #commandtab-->
 
+
+    
     </div><!-- /.tab-content -->
   </div><!-- /.eqLogic -->
 </div><!-- /.row row-overflow -->
