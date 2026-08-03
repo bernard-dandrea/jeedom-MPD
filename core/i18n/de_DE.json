@@ -8,7 +8,7 @@
         "Connexion KO: ": "KO-Verbindung: ",
         "Connexion OK: ": "Verbindung OK: ",
         "Equipement desactivé impossible d\\éxecuter la commande : ": "Gerät deaktiviert, Befehl kann nicht ausgeführt werden: ",
-        "Type d\\'action non défini": "Art der Aktion nicht definiert",
+        "Type d action non défini : ": "Aktionsart nicht definiert: ",
         "commande": "Steuerung",
         "déjà en cours": "bereits im Gange",
         "non trouvé dans la queue de MPD": "nicht in der MPD-Warteschlange gefunden",

@@ -8,7 +8,7 @@
         "Connexion KO: ": "Conexión KO: ",
         "Connexion OK: ": "Conexión correcta: ",
         "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipo desactivado, imposible ejecutar el comando: ",
-        "Type d\\'action non défini": "Tipo de acción no definido",
+        "Type d action non défini : ": "Tipo de acción no definido: ",
         "commande": "control",
         "déjà en cours": "ya en marcha",
         "non trouvé dans la queue de MPD": "no encontrado en la cola de MPD",
