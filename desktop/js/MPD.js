@@ -67,9 +67,11 @@ function addCmdToTable(_cmd) {
     tr += '<span class="input-group-btn"><a class="cmdAction btn btn-sm btn-default" data-l1key="chooseIcon" title="{{Choisir une icône}}"><i class="fas fa-icons"></i></a></span>'
     tr += '<span class="cmdAttr input-group-addon roundedRight" data-l1key="display" data-l2key="icon" style="font-size:19px;padding:0 5px 0 0!important;"></span>'
     tr += '</div>'
+    /*
     tr += '<select class="cmdAttr form-control input-sm" data-l1key="value" style="display:none;margin-top:5px;" title="{{Commande info liée}}">'
     tr += '<option value="">{{Aucune}}</option>'
     tr += '</select>'
+    */
     // BD fin des modifs
     tr += '</td>'
     tr += '<td>'
@@ -119,7 +121,7 @@ function addCmdToTable(_cmd) {
             jeedomUtils.showAlert({ message: error.message, level: 'danger' })
         },
         success: function (result) {
-            newRow.querySelector('.cmdAttr[data-l1key="value"]').insertAdjacentHTML('beforeend', result)
+            newRow.querySelector('.cmdAttr[data-l1key="value"]')?.insertAdjacentHTML('beforeend', result)
             newRow.setJeeValues(_cmd, '.cmdAttr')
             jeedom.cmd.changeType(newRow, init(_cmd.subType))
         }
@@ -134,26 +136,38 @@ function printEqLogic(_eqLogic) {
 
 document.querySelector('#bt_TestConnexionMPD').addEventListener('click', function () {
 
-    const eqLogicId = document.querySelector('.eqLogicAttr[data-l1key="id"]').value;
+    var eqLogicId = document.querySelector('.eqLogicAttr[data-l1key="id"]').value;
 
     var paramsAJAX = {
+        type: "POST",
         url: 'plugins/MPD/core/ajax/MPD.ajax.php',
         data: {
             action: 'test_connexion',
             id: eqLogicId
         },
-        type: "POST",
         dataType: 'json',
-        success: function (data) {
-            jeedomUtils.showAlert({ message: data.result, level: 'success' });
-        },
         error: function (request, status, error) {
-            handleAjaxError(request, status, error);
+            handleAjaxError(request, status, error)
+        },
+        success: function (data) {
+            var message = data.result;
+            
+            var level = 'success';
+            if (message.substr(0, 2) === 'KO') {
+                level = 'warning';
+            }
+            if (message.length >= 4) {
+                message = message.substr(3);
+            }
+            jeedomUtils.showAlert({
+                message: message,
+                level: level
+            })
         }
-    };
+    }
     domUtils.ajax(paramsAJAX);
-
 });
+
 
 document.querySelector('#bt_Generer_Commandes').addEventListener('click', function () {
 
