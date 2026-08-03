@@ -8,8 +8,6 @@
   },
   "npm": {
   },
-  "yarn": {
-  },
   "plugin": {
   },
   "post-install" : {
