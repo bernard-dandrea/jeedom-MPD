@@ -1,6 +1,6 @@
 <?php
 
-// Last Modified : 2026/02/11 18:50:16
+// Last Modified : 2026/08/03 15:13:27
 
 /* This file is part of Jeedom.
  *
@@ -23,10 +23,6 @@ require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 
 class MPD extends eqLogic
 {
-    /*     * *************************Attributs****************************** */
-
-
-    /*     * ***********************Methode static*************************** */
 
     public function call_mpc($_command)
     {
@@ -66,9 +62,9 @@ class MPD extends eqLogic
         $result = $this->call_mpc($request);
 
         if (strpos($result[0], 'version') !== false) {
-            $msg = __('Connexion OK: ', __FILE__);
+            $msg = 'OK ' . __('Connexion OK: ', __FILE__);
         } else {
-            $msg = __('Connexion KO: ', __FILE__);
+            $msg = 'KO ' . __('Connexion KO: ', __FILE__);
         }
         $msg .= ' ' .  $result[0];
         log::add('MPD', 'debug', $msg);
@@ -77,7 +73,7 @@ class MPD extends eqLogic
 
     public function generer_commandes()
     {
-        log::add('MPD', 'info','generer_commandes');
+        log::add('MPD', 'info', 'generer_commandes');
 
         $order = time();
         $update_eqlogic = false;
@@ -370,7 +366,7 @@ class MPD extends eqLogic
                 $order++;
                 $command->setOrder($order);
                 $command->setName($name);
-                //        $command->setDisplay('icon', '<i class="icon jeedomapp-dirG"></i>');
+                
                 $command->setType('action');
                 $command->setSubType('other');
                 $command->setEqLogic_id($this->getId());
@@ -391,7 +387,7 @@ class MPD extends eqLogic
                 $order++;
                 $command->setOrder($order);
                 $command->setName($name);
-                //        $command->setDisplay('icon', '<i class="icon jeedomapp-dirG"></i>');
+                
                 $command->setType('action');
                 $command->setSubType('select');
                 $command->setEqLogic_id($this->getId());
@@ -416,7 +412,7 @@ class MPD extends eqLogic
                 $order++;
                 $command->setOrder($order);
                 $command->setName($name);
-                //        $command->setDisplay('icon', '<i class="icon jeedomapp-dirG"></i>');
+                
                 $command->setType('action');
                 $command->setSubType('select');
                 $command->setEqLogic_id($this->getId());
@@ -501,30 +497,9 @@ class MPD extends eqLogic
         $this->set_layout();
     }
 
-    public function preUpdate()
-    {
-        if ($this->getIsEnable()) {
-            //    return $this->getSessionId();
-        }
-    }
-
-    public function preSave()
-    {
-        if ($this->getIsEnable()) {
-            //    return $this->getSessionId();
-        }
-    }
-
-    public function preRemove()
-    {
-
-        return true;
-    }
-
 
     public function postInsert()
     {
-
         $this->generer_commandes();
     }
 }
@@ -555,7 +530,7 @@ class MPDCmd extends cmd
                 $value = '';
                 break;
             default:
-                log::add('MPD', 'info', __('Type d\'action non défini', __FILE__) . '' : ' . $this->getSubType());
+                log::add('MPD', 'info', __('Type d action non défini : ', __FILE__) . $this->getSubType());
                 die;
                 break;
         }
@@ -659,7 +634,7 @@ class MPDCmd extends cmd
                 $request = 'current -f %file%';
                 $result = $eqLogic->call_mpc($request);
                 if (isset($result[0]) &&  $result[0] == $value) {
-                    log::add('MPD', 'debug', 'song ' . $value . ' '  . __('déjà en cours', __FILE__));
+                    log::add('MPD', 'debug', 'song ' . $value . ' ' . __('déjà en cours', __FILE__));
                     return true;
                 }
 
