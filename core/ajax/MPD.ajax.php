@@ -41,7 +41,8 @@ try {
         ajax::success($MPD);
 
     }
-        
+
+
     if (init('action') == 'generer_commandes') {
 
         $eqLogic = MPD::byId(init('id'));
