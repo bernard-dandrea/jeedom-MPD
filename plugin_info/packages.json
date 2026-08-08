@@ -1,15 +1,5 @@
 {
-  "pre-install" : {
-  },
   "apt" : {
     "mpc" : {}
-  },
-  "pip3": {
-  },
-  "npm": {
-  },
-  "plugin": {
-  },
-  "post-install" : {
   }
 }
