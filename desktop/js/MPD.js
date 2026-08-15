@@ -1,5 +1,8 @@
 /* This file is part of Jeedom.
 *
+
+// Last Modified : 2026/08/15 13:26:04
+
 * Jeedom is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
 * the Free Software Foundation, either version 3 of the License, or
@@ -14,8 +17,6 @@
 * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
 */
 
-// code repris de core/core/js/plugin.template.js/addCmdToTableDefault version 4.5.2
-// Modifications avec commentaire // BD
 
 function addCmdToTable(_cmd) {
 
@@ -23,11 +24,10 @@ function addCmdToTable(_cmd) {
     if (document.querySelector('#table_cmd thead') == null) {
         table = '<thead>'
         table += '<tr>'
-        table += '<th>Id</th>'  // BD
+        table += '<th>Id</th>'  
         table += '<th>{{Nom}}</th>'
         table += '<th>{{Type}}</th>'
         table += '<th>{{Commande}}</th>'
-        // BD     table += '<th>{{Options}}</th>'
         table += '<th>{{Paramètres}}</th>'
         table += '<th>{{Valeur}}</th>'
         table += '<th>{{Action}}</th>'
@@ -48,31 +48,13 @@ function addCmdToTable(_cmd) {
     tr += '<span class="cmdAttr" data-l1key="id"></span>'
     tr += '</td>'
     tr += '<td>'
-    /*   BD code remplacé par les définitions suivantes
-    tr += '<div class="row">'
-    tr += '<div class="col-sm-6">'
-    tr += '<a class="cmdAction btn btn-default btn-sm" data-l1key="chooseIcon"><i class="fa fa-flag"></i> Icône</a>'
-    tr += '<span class="cmdAttr" data-l1key="display" data-l2key="icon" style="margin-left : 10px;"></span>'
-    tr += '</div>'
-    tr += '<div class="col-sm-6">'
-    tr += '<input class="cmdAttr form-control input-sm" data-l1key="name">'
-    tr += '</div>'
-    tr += '</div>'
-    tr += '<select class="cmdAttr form-control input-sm" data-l1key="value" style="display : none;margin-top : 5px;" title="{{La valeur de la commande vaut par défaut la commande}}">'
-    tr += '<option value="">Aucune</option>'
-    tr += '</select>'
-    */
+
     tr += '<div class="input-group">'
     tr += '<input class="cmdAttr form-control input-sm roundedLeft" data-l1key="name" placeholder="{{Nom de la commande}}">'
     tr += '<span class="input-group-btn"><a class="cmdAction btn btn-sm btn-default" data-l1key="chooseIcon" title="{{Choisir une icône}}"><i class="fas fa-icons"></i></a></span>'
     tr += '<span class="cmdAttr input-group-addon roundedRight" data-l1key="display" data-l2key="icon" style="font-size:19px;padding:0 5px 0 0!important;"></span>'
     tr += '</div>'
-    /*
-    tr += '<select class="cmdAttr form-control input-sm" data-l1key="value" style="display:none;margin-top:5px;" title="{{Commande info liée}}">'
-    tr += '<option value="">{{Aucune}}</option>'
-    tr += '</select>'
-    */
-    // BD fin des modifs
+
     tr += '</td>'
     tr += '<td>'
     tr += '<span class="type" type="' + init(_cmd.type) + '">' + jeedom.cmd.availableType() + '</span>'
@@ -80,21 +62,11 @@ function addCmdToTable(_cmd) {
     tr += '</td>'
     tr += '<td style="min-width:400px"><input class="cmdAttr form-control input-sm" data-l1key="logicalId" value="0" style="width : 70%; display : inline-block;" placeholder="{{Commande}}"><br/>'
     tr += '</td>'
-    // Bd tr += '<td>'
-    // Bd tr += '<input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="returnStateValue" placeholder="{{Valeur retour d\'état}}" style="width:48%;display:inline-block;">'
-    // Bd tr += '<input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="returnStateTime" placeholder="{{Durée avant retour d\'état (min)}}" style="width:48%;display:inline-block;margin-left:2px;">'
-    // Bd tr += '<select class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="updateCmdId" style="display : none;" title="{{Commande d\'information à mettre à jour}}">'
-    // BD tr += '<option value="">Aucune</option>'
-    // Bd tr += '</select>'
-    // Bd tr += '</td>'
+
     tr += '<td>'
-    // BD tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="minValue" placeholder="{{Min}}" title="{{Min}}" style="width:30%;display:inline-block;">'
-    // BD tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="maxValue" placeholder="{{Max}}" title="{{Max}}" style="width:30%;display:inline-block;">'
-    // BD tr += '<input class="cmdAttr form-control input-sm" data-l1key="unite" placeholder="{{Unité}}" title="{{Unité}}" style="width:30%;display:inline-block;margin-left:2px;">'
-    // BD tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="listValue" placeholder="{{Liste de valeur|texte séparé par ;}}" title="{{Liste}}">'
+
     tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isVisible" checked/>{{Afficher}}</label></span> '
     tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isHistorized" checked/>{{Historiser}}</label></span> '
-    // Bd  tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr" data-l1key="display" data-l2key="invertBinary"/>{{Inverser}}</label></span> '
     tr += '</td>'
     tr += '<td>'
     tr += '<span class="cmdAttr" data-l1key="htmlstate"></span>'
@@ -132,7 +104,6 @@ function printEqLogic(_eqLogic) {
 
     $MPDtype = _eqLogic.configuration.type;
 }
-
 
 document.querySelector('#bt_TestConnexionMPD').addEventListener('click', function () {
 
