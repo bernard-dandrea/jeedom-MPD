@@ -1,6 +1,6 @@
 <?php
 
-// Last Modified : 2026/08/07 06:25:40
+// Last Modified : 2026/08/16 18:30:48
 
 /* This file is part of Jeedom.
  *
@@ -143,31 +143,6 @@ class MPD extends eqLogic
                 $command->setOrder($order);
                 $command->setName($name);
                 $command->setDisplay('icon', '<i class="fas fa-volume-up"></i>');
-                $command->setType('action');
-                $command->setSubType('other');
-                $command->setEqLogic_id($this->getId());
-                $command->save();
-
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::column', '1');
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::line', '2');
-                $update_eqlogic = true;
-            }
-        }
-
-        $logicalID = 'refresh';
-        $name = 'refresh';
-        if (is_object(cmd::byEqLogicIdCmdName($this->getId(), $name)) === false) {
-            unset($command);
-            $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
-            if (!is_object($command)) {
-                log::add('MPD', 'info', __FUNCTION__ . ' ' .  __('commande', __FILE__) . ' ' . $name);
-                $command = new MPDCmd();
-                $command->setLogicalId($logicalID);
-                $command->setIsVisible(1);
-                $order++;
-                $command->setOrder($order);
-                $command->setName($name);
-                $command->setDisplay('icon', '<i class="icon jeedomapp-reload"></i>');
                 $command->setType('action');
                 $command->setSubType('other');
                 $command->setEqLogic_id($this->getId());
@@ -452,9 +427,12 @@ class MPD extends eqLogic
             }
         }
 
+        $return = 'KO ' . __('Toutes les commandes sont déjà générées', __FILE__);
         if ($update_eqlogic === true) {
+            $return = 'OK ' . __('Une ou plusieurs commandes ont été générées', __FILE__);
             $this->save();
         }
+        return $return;
     }
     public function set_layout()
     {
@@ -501,6 +479,33 @@ class MPD extends eqLogic
     public function postInsert()
     {
         $this->generer_commandes();
+        $this->postUpdate();
+    }
+
+    public function postUpdate()
+    {
+        $logicalID = 'refresh';
+        $name = 'refresh';
+        if (is_object(cmd::byEqLogicIdCmdName($this->getId(), $name)) === false) {
+            unset($command);
+            $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
+            if (!is_object($command)) {
+                $command = new MPDCmd();
+                $command->setLogicalId($logicalID);
+                $command->setIsVisible(1);
+                
+                $command->setOrder('1');
+                $command->setName($name);
+                $command->setDisplay('icon', '<i class="icon jeedomapp-reload"></i>');
+                $command->setType('action');
+                $command->setSubType('other');
+                $command->setEqLogic_id($this->getId());
+                $command->save();
+
+                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::column', '1');
+                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::line', '2');
+            }
+        }
     }
 }
 
@@ -694,16 +699,9 @@ class MPDCmd extends cmd
 
     public function dontRemoveCmd()
     {
-        $eqLogic = $this->getEqLogic();
-        if (is_object($eqLogic)) {
-            if ($eqLogic->getConfiguration('type', '') == 'MPD') {
-                /*
-                if ($this->getLogicalId() == 'updatetime') {
-                    return true;
-                }
-                */
-            }
-            return false;
+        if ($this->getLogicalId() == 'refresh') {
+            return true;
         }
+        return false;
     }
 }
