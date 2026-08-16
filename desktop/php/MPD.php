@@ -70,7 +70,9 @@ $eqLogics = eqLogic::byType($plugin->getId());
     <div class="input-group pull-right" style="display:inline-flex;">
       <span class="input-group-btn">
         <!-- Les balises <a></a> sont volontairement fermées à la ligne suivante pour éviter les espaces entre les boutons. Ne pas modifier -->
-        <a class="btn btn-sm btn-default eqLogicAction roundedLeft" data-action="configure"><i
+        <a class="btn btn-sm btn-default eqLogicAction roundedLeft" data-action="copy"><i
+            class="fas fa-copy"></i><span class="hidden-xs"> {{Dupliquer}}</span>
+        </a><a class="btn btn-sm btn-default eqLogicAction roundedLeft" data-action="configure"><i
             class="fas fa-cogs"></i><span class="hidden-xs"> {{Configuration avancée}}</span>
         </a><a class="btn btn-sm btn-success eqLogicAction" data-action="save"><i class="fas fa-check-circle"></i>
           {{Sauvegarder}}
@@ -144,7 +146,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
               <div class="form-group">
                 <label class="col-sm-4 control-label"></label>
                 <div class="col-sm-4">
-                  <a class="btn btn-default " id="bt_TestConnexionMPD" '><i class="fa fa-cogs"> {{Tester la connexion au MPD}}</i></a>
+                  <a class="btn btn-default " id="bt_TestConnexionMPD" ' title=' {{Sauvegarder la configuration avant de lancer le test}}'><i class="fa fa-cogs"> {{Tester la connexion au MPD}}</i></a>
                   <a class="btn btn-default " id="bt_Generer_Commandes" '><i class="fa fa-cogs"> {{Générer les commandes}}</i></a>
                 </div>
               </div>
@@ -188,7 +190,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
       </div><!-- /.tabpanel #commandtab-->
 
 
-    
+
     </div><!-- /.tab-content -->
   </div><!-- /.eqLogic -->
 </div><!-- /.row row-overflow -->
