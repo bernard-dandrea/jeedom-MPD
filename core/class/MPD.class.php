@@ -1,6 +1,6 @@
 <?php
 
-// Last Modified : 2026/08/16 18:30:48
+// Last Modified : 2026/08/16 19:02:15
 
 /* This file is part of Jeedom.
  *
@@ -414,9 +414,10 @@ class MPD extends eqLogic
                 $command->setName($name);
                 $command->setType('info');
                 $command->setSubType('string');
-                $command->setTemplate('dashboard', 'core::multiline');
-                $command->setTemplate('mobile', 'core::multiline');
+                $command->setTemplate('dashboard', 'core::line');
+                $command->setTemplate('mobile', 'core::line');
                 $command->setDisplay('showNameOndashboard', '0');
+                $command->setDisplay('showNameOnmobile', '0');
                 $command->setIsHistorized(0);
                 $command->setEqLogic_id($this->getId());
                 $command->save();
