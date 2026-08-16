@@ -1,7 +1,7 @@
 /* This file is part of Jeedom.
 *
 
-// Last Modified : 2026/08/15 13:26:04
+// Last Modified : 2026/08/16 11:32:04
 
 * Jeedom is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@ function addCmdToTable(_cmd) {
     if (document.querySelector('#table_cmd thead') == null) {
         table = '<thead>'
         table += '<tr>'
-        table += '<th>Id</th>'  
+        table += '<th>Id</th>'
         table += '<th>{{Nom}}</th>'
         table += '<th>{{Type}}</th>'
         table += '<th>{{Commande}}</th>'
@@ -107,7 +107,7 @@ function printEqLogic(_eqLogic) {
 
 document.querySelector('#bt_TestConnexionMPD').addEventListener('click', function () {
 
-    var eqLogicId = document.querySelector('.eqLogicAttr[data-l1key="id"]').value;
+    var eqLogicId = document.querySelector('.eqLogicAttr[data-l1key="id"]').jeeValue();
 
     var paramsAJAX = {
         type: "POST",
@@ -122,7 +122,7 @@ document.querySelector('#bt_TestConnexionMPD').addEventListener('click', functio
         },
         success: function (data) {
             var message = data.result;
-            
+
             var level = 'success';
             if (message.substr(0, 2) === 'KO') {
                 level = 'warning';
@@ -142,24 +142,40 @@ document.querySelector('#bt_TestConnexionMPD').addEventListener('click', functio
 
 document.querySelector('#bt_Generer_Commandes').addEventListener('click', function () {
 
-    const eqLogicId = document.querySelector('.eqLogicAttr[data-l1key="id"]').value;
+    var eqLogicId = document.querySelector('.eqLogicAttr[data-l1key="id"]').jeeValue();
 
     var paramsAJAX = {
+        type: "POST",
         url: 'plugins/MPD/core/ajax/MPD.ajax.php',
         data: {
             action: 'generer_commandes',
             id: eqLogicId
         },
-        type: "POST",
         dataType: 'json',
-        success: function (data) {
-            //  location.reload();
-
-        },
         error: function (request, status, error) {
-            handleAjaxError(request, status, error);
+            handleAjaxError(request, status, error)
+        },
+        success: function (data) {
+            var message = data.result;
+
+            var level = 'success';
+            if (message.substr(0, 2) === 'KO') {
+                level = 'info';
+            }
+            if (message.length >= 4) {
+                message = message.substr(3);
+            }
+            jeedomUtils.showAlert({
+                message: message,
+                level: level
+            })
+            if (level == 'success') {
+                setTimeout(function () {
+                    location.reload()
+                }, 3000)
+            }
         }
-    };
+    }
     domUtils.ajax(paramsAJAX);
 
 });
