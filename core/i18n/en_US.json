@@ -7,6 +7,7 @@
     "plugins\/MPD\/core\/class\/MPD.class.php": {
         "Connexion KO: ": "Connection KO: ",
         "Connexion OK: ": "Connection OK: ",
+        "Disposition réinitialisée": "Layout reset",
         "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipment disabled, unable to execute command: ",
         "Toutes les commandes sont déjà générées": "All commands have already been generated",
         "Type d action non défini : ": "Undefined action type: ",
@@ -55,6 +56,7 @@
         "Paramètres généraux": "General settings",
         "Port": "Port",
         "Rechercher": "Search",
+        "Réinitialisée la disposition des commandes": "Reset the command layout",
         "Sauvegarder": "Save",
         "Sauvegarder la configuration avant de lancer le test": "Save the configuration before running the test",
         "Supprimer": "Delete",
