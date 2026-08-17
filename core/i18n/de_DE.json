@@ -7,6 +7,7 @@
     "plugins\/MPD\/core\/class\/MPD.class.php": {
         "Connexion KO: ": "KO-Verbindung: ",
         "Connexion OK: ": "Verbindung OK: ",
+        "Disposition réinitialisée": "Anordnung zurückgesetzt",
         "Equipement desactivé impossible d\\éxecuter la commande : ": "Gerät deaktiviert, Befehl kann nicht ausgeführt werden: ",
         "Toutes les commandes sont déjà générées": "Alle Bestellungen wurden bereits generiert",
         "Type d action non défini : ": "Aktionsart nicht definiert: ",
@@ -55,6 +56,7 @@
         "Paramètres généraux": "Allgemeine Einstellungen",
         "Port": "Hafen",
         "Rechercher": "Suchen nach",
+        "Réinitialisée la disposition des commandes": "Anordnung der Bedienelemente zurückgesetzt",
         "Sauvegarder": "Zu schützen",
         "Sauvegarder la configuration avant de lancer le test": "Konfiguration vor dem Test speichern",
         "Supprimer": "Entfernen",
