@@ -49,6 +49,19 @@ try {
 
     }
 
+  if (init('action') == 'bt_set_layout') {
+
+        $eqLogic = MPD::byId(init('id'));
+        if (!is_object($eqLogic)) {
+            throw new \Exception(__('MPD eqLogic non trouvé : ', __FILE__) . init('id'));
+        }
+        
+        $MPD = $eqLogic->bt_set_layout();
+        ajax::success($MPD);
+
+    }
+
+
     throw new Exception(__('Aucune méthode correspondante à', __FILE__) . ' : ' . init('action'));
     /*     * *********Catch exeption*************** */
 } catch (Exception $e) {
