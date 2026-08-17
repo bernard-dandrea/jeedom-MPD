@@ -148,6 +148,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
                 <div class="col-sm-4">
                   <a class="btn btn-default " id="bt_TestConnexionMPD" ' title=' {{Sauvegarder la configuration avant de lancer le test}}'><i class="fa fa-cogs"> {{Tester la connexion au MPD}}</i></a>
                   <a class="btn btn-default " id="bt_Generer_Commandes" '><i class="fa fa-cogs"> {{Générer les commandes}}</i></a>
+                  <a class="btn btn-default " id="bt_set_layout" '><i class="fa fa-cogs"> {{Réinitialisée la disposition des commandes}}</i></a>
                 </div>
               </div>
 
