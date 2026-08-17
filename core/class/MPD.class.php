@@ -1,6 +1,6 @@
 <?php
 
-// Last Modified : 2026/08/16 19:02:15
+// Last Modified : 2026/08/17 18:27:38
 
 /* This file is part of Jeedom.
  *
@@ -98,8 +98,6 @@ class MPD extends eqLogic
                 $command->setEqLogic_id($this->getId());
                 $command->save();
 
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::column', '1');
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::line', '2');
                 $update_eqlogic = true;
             }
         }
@@ -123,8 +121,6 @@ class MPD extends eqLogic
                 $command->setEqLogic_id($this->getId());
                 $command->save();
 
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::column', '1');
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::line', '2');
                 $update_eqlogic = true;
             }
         }
@@ -148,8 +144,6 @@ class MPD extends eqLogic
                 $command->setEqLogic_id($this->getId());
                 $command->save();
 
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::column', '1');
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::line', '2');
                 $update_eqlogic = true;
             }
         }
@@ -174,8 +168,6 @@ class MPD extends eqLogic
                 $command->setEqLogic_id($this->getId());
                 $command->save();
 
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::column', '1');
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::line', '1');
                 $update_eqlogic = true;
             }
         }
@@ -199,8 +191,6 @@ class MPD extends eqLogic
                 $command->setEqLogic_id($this->getId());
                 $command->save();
 
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::column', '1');
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::line', '1');
                 $update_eqlogic = true;
             }
         }
@@ -225,8 +215,6 @@ class MPD extends eqLogic
                 $command->setEqLogic_id($this->getId());
                 $command->save();
 
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::column', '1');
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::line', '1');
                 $update_eqlogic = true;
             }
         }
@@ -250,8 +238,6 @@ class MPD extends eqLogic
                 $command->setEqLogic_id($this->getId());
                 $command->save();
 
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::column', '1');
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::line', '1');
                 $update_eqlogic = true;
             }
         }
@@ -301,8 +287,6 @@ class MPD extends eqLogic
                 $command->setEqLogic_id($this->getId());
                 $command->save();
 
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::column', '1');
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::line', '1');
                 $update_eqlogic = true;
             }
         }
@@ -368,8 +352,6 @@ class MPD extends eqLogic
                 $command->setEqLogic_id($this->getId());
                 $command->save();
 
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::column', '1');
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::line', '3');
                 $update_eqlogic = true;
             }
         }
@@ -393,8 +375,6 @@ class MPD extends eqLogic
                 $command->setEqLogic_id($this->getId());
                 $command->save();
 
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::column', '1');
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::line', '4');
                 $update_eqlogic = true;
             }
         }
@@ -422,11 +402,34 @@ class MPD extends eqLogic
                 $command->setEqLogic_id($this->getId());
                 $command->save();
 
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::column', '1');
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::line', '5');
+                $update_eqlogic = true;
+
+            }
+        }
+
+        $logicalID = 'refresh';
+        $name = 'refresh';
+        if (is_object(cmd::byEqLogicIdCmdName($this->getId(), $name)) === false) {
+            unset($command);
+            $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
+            if (!is_object($command)) {
+                $command = new MPDCmd();
+                $command->setLogicalId($logicalID);
+                $command->setIsVisible(1);
+
+                $command->setOrder('1');
+                $command->setName($name);
+                $command->setDisplay('icon', '<i class="icon jeedomapp-reload"></i>');
+                $command->setType('action');
+                $command->setSubType('other');
+                $command->setEqLogic_id($this->getId());
+                $command->save();
+
                 $update_eqlogic = true;
             }
         }
+
+
 
         $return = 'KO ' . __('Toutes les commandes sont déjà générées', __FILE__);
         if ($update_eqlogic === true) {
@@ -437,8 +440,10 @@ class MPD extends eqLogic
     }
     public function set_layout()
     {
+
         log::add('MPD', 'info', __FUNCTION__ . ' ' . $this->getName());
 
+        $this->setDisplay('layout', null);
         $this->setDisplay('layout::dashboard', 'table');
         $this->setDisplay(
             'layout::dashboard::table::parameters',
@@ -463,8 +468,30 @@ class MPD extends eqLogic
         $this->setDisplay('layout::dashboard::table::nbColumn', '1');
         $this->setDisplay('width', '232px');
         $this->setDisplay('height', '200px');
+
+        $this->setCmdDisplay('refresh', 1, 1);
+        $this->setCmdDisplay('prev', 1, 1);
+        $this->setCmdDisplay('seek -5%', 1, 1);
+        $this->setCmdDisplay('play', 1, 1);
+        $this->setCmdDisplay('pause', 1, 1);
+        $this->setCmdDisplay('seek +5%', 1, 1);
+        $this->setCmdDisplay('next', 1, 1);
+        $this->setCmdDisplay('mute', 1, 2);
+        $this->setCmdDisplay('volume -10', 1, 2);
+        $this->setCmdDisplay('volume +10', 1, 2);
+        $this->setCmdDisplay('load', 1, 3);
+        $this->setCmdDisplay('song', 1, 4);
     }
 
+    public function setCmdDisplay($logicalID, $column, $line)
+    {
+        unset($command);
+        $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
+        if (is_object($command)) {
+            $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::column', $column);
+            $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::line', $line);
+        }
+    }
     public function preInsert()
     {
         if ($this->getConfiguration('type', '') == "") {
@@ -473,41 +500,24 @@ class MPD extends eqLogic
         $this->setIsEnable(1);
         $this->setIsVisible(1);
         $this->setCategory('multimedia', '1');
-        $this->set_layout();
     }
 
 
     public function postInsert()
     {
         $this->generer_commandes();
-        $this->postUpdate();
+        $this->set_layout();
+        $this->save();
     }
 
-    public function postUpdate()
+    public function bt_set_layout()
     {
-        $logicalID = 'refresh';
-        $name = 'refresh';
-        if (is_object(cmd::byEqLogicIdCmdName($this->getId(), $name)) === false) {
-            unset($command);
-            $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
-            if (!is_object($command)) {
-                $command = new MPDCmd();
-                $command->setLogicalId($logicalID);
-                $command->setIsVisible(1);
-                
-                $command->setOrder('1');
-                $command->setName($name);
-                $command->setDisplay('icon', '<i class="icon jeedomapp-reload"></i>');
-                $command->setType('action');
-                $command->setSubType('other');
-                $command->setEqLogic_id($this->getId());
-                $command->save();
-
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::column', '1');
-                $this->setDisplay('layout::dashboard::table::cmd::' . $command->getId() . '::line', '2');
-            }
-        }
+        $this->set_layout();
+        $this->save();
+        return 'OK ' . __('Disposition réinitialisée',__FILE__);
     }
+
+
 }
 
 class MPDCmd extends cmd
