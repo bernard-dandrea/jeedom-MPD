@@ -1,7 +1,7 @@
 /* This file is part of Jeedom.
 *
 
-// Last Modified : 2026/08/17 18:21:49
+// Last Modified : 2026/08/18 16:37:44
 
 * Jeedom is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -54,7 +54,11 @@ function addCmdToTable(_cmd) {
     tr += '<span class="input-group-btn"><a class="cmdAction btn btn-sm btn-default" data-l1key="chooseIcon" title="{{Choisir une icône}}"><i class="fas fa-icons"></i></a></span>'
     tr += '<span class="cmdAttr input-group-addon roundedRight" data-l1key="display" data-l2key="icon" style="font-size:19px;padding:0 5px 0 0!important;"></span>'
     tr += '</div>'
-
+    if (_cmd.type == 'action' && (_cmd.logicalId == 'song')) {
+        tr += '<select class="cmdAttr form-control input-sm" data-l1key="value" style="display:none;margin-top:5px;" title="{{Commande info liée}}">'
+        tr += '<option value="">{{Aucune}}</option>'
+        tr += '</select>'
+    }
     tr += '</td>'
     tr += '<td>'
     tr += '<span class="type" type="' + init(_cmd.type) + '">' + jeedom.cmd.availableType() + '</span>'

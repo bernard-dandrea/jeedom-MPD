@@ -1,6 +1,6 @@
 <?php
 
-// Last Modified : 2026/08/17 18:27:38
+// Last Modified : 2026/08/18 16:50:36
 
 /* This file is part of Jeedom.
  *
@@ -356,29 +356,6 @@ class MPD extends eqLogic
             }
         }
 
-        $logicalID = 'song';
-        $name = 'Song';
-        if (is_object(cmd::byEqLogicIdCmdName($this->getId(), $name)) === false) {
-            unset($command);
-            $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
-            if (!is_object($command)) {
-                log::add('MPD', 'info', __FUNCTION__ . ' ' .  __('commande', __FILE__) . ' ' . $name);
-                $command = new MPDCmd();
-                $command->setLogicalId($logicalID);
-                $command->setIsVisible(1);
-                $order++;
-                $command->setOrder($order);
-                $command->setName($name);
-
-                $command->setType('action');
-                $command->setSubType('select');
-                $command->setEqLogic_id($this->getId());
-                $command->save();
-
-                $update_eqlogic = true;
-            }
-        }
-
         $logicalID = 'current';
         $name = 'Current';
         if (is_object(cmd::byEqLogicIdCmdName($this->getId(), $name)) === false) {
@@ -403,7 +380,35 @@ class MPD extends eqLogic
                 $command->save();
 
                 $update_eqlogic = true;
+            }
+        }
 
+        $logicalID = 'song';
+        $name = 'Song';
+        if (is_object(cmd::byEqLogicIdCmdName($this->getId(), $name)) === false) {
+            unset($command);
+            $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
+            if (!is_object($command)) {
+                log::add('MPD', 'info', __FUNCTION__ . ' ' .  __('commande', __FILE__) . ' ' . $name);
+                $command = new MPDCmd();
+                $command->setLogicalId($logicalID);
+                $command->setIsVisible(1);
+                $order++;
+                $command->setOrder($order);
+                $command->setName($name);
+
+                unset($command_current);
+                $command_current = cmd::byEqLogicIdAndLogicalId($this->getId(), 'current');
+                if (is_object($command_current)) {
+                    $command->setValue($command_current->getID()); // commande info liée
+                }
+
+                $command->setType('action');
+                $command->setSubType('select');
+                $command->setEqLogic_id($this->getId());
+                $command->save();
+
+                $update_eqlogic = true;
             }
         }
 
@@ -481,6 +486,8 @@ class MPD extends eqLogic
         $this->setCmdDisplay('volume +10', 1, 2);
         $this->setCmdDisplay('load', 1, 3);
         $this->setCmdDisplay('song', 1, 4);
+        $this->setCmdDisplay('current', 1, 5);
+
     }
 
     public function setCmdDisplay($logicalID, $column, $line)
@@ -514,10 +521,8 @@ class MPD extends eqLogic
     {
         $this->set_layout();
         $this->save();
-        return 'OK ' . __('Disposition réinitialisée',__FILE__);
+        return 'OK ' . __('Disposition réinitialisée', __FILE__);
     }
-
-
 }
 
 class MPDCmd extends cmd
