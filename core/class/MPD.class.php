@@ -556,8 +556,6 @@ class MPDCmd extends cmd
                 break;
         }
 
-
-
         if (strtolower(substr($LogicalID, 0, 9)) === 'playsong ') {
             $value = trim(substr($LogicalID, 8));
             $LogicalID = 'song';

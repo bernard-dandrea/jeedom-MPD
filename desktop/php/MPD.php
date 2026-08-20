@@ -1,6 +1,6 @@
 <?php
 
-// Last Modified : 2026/08/06 17:45:45
+// Last Modified : 2026/08/20 16:47:08
 
 if (!isConnect('admin')) {
   throw new Exception('{{401 - Accès non autorisé}}');
@@ -149,9 +149,9 @@ $eqLogics = eqLogic::byType($plugin->getId());
               <div class="form-group">
                 <label class="col-sm-4 control-label"></label>
                 <div class="col-sm-4">
-                  <a class="btn btn-default " id="bt_TestConnexionMPD" ' title=' {{Sauvegarder la configuration avant de lancer le test}}'><i class="fa fa-cogs"> {{Tester la connexion au MPD}}</i></a>
-                  <a class="btn btn-default " id="bt_Generer_Commandes" '><i class="fa fa-cogs"> {{Générer les commandes}}</i></a>
-                  <a class="btn btn-default " id="bt_set_layout" '><i class="fa fa-cogs"> {{Réinitialisée la disposition des commandes}}</i></a>
+                  <a class="btn btn-default " id="bt_TestConnexionMPD" title="{{Si vous avez modifié un des paramètres de connexion, veuillez d'abord sauvegarder la configuration avant de lancer le test}}"><i class="fa fa-cogs"> {{Tester la connexion au MPD}}</i></a>
+                  <a class="btn btn-default " id="bt_Generer_Commandes" title="{{Utile si vous avez supprimé une commande et souhaitez la recréer}}"><i class="fa fa-cogs"> {{Générer les commandes}}</i></a>
+                  <a class="btn btn-default " id="bt_set_layout" title="{{Nécessaire si cet équipement est issu de la duplication d'un autre équipement}}"><i class="fa fa-cogs"> {{Réinitialiser la disposition des commandes}}</i></a>
                 </div>
               </div>
 
