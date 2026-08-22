@@ -1,4 +1,4 @@
-// Last Modified : 2026/08/22 18:42:36
+// Last Modified : 2026/08/22 22:27:03
 
 /*
  * Copyright (C) 2026 Bernard Dandrea
@@ -31,7 +31,8 @@ function addCmdToTable(_cmd) {
     if (!isset(_cmd.configuration)) {
         _cmd.configuration = {}
     }
-    var tr = '<tr>'
+ 
+    var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '">'
     tr += '<td style="min-width:50px;width:70px;">'
     tr += '<span class="cmdAttr" data-l1key="id"></span>'
     tr += '</td>'
