@@ -1,28 +1,16 @@
-/* This file is part of Jeedom.
-*
+// Last Modified : 2026/08/22 18:42:36
 
-// Last Modified : 2026/08/18 16:37:44
-
-* Jeedom is free software: you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation, either version 3 of the License, or
-* (at your option) any later version.
-*
-* Jeedom is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
-*/
-
+/*
+ * Copyright (C) 2026 Bernard Dandrea
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * https://www.gnu.org/licenses/gpl-3.0.html
+ */
 
 function addCmdToTable(_cmd) {
 
-    if (document.getElementById('table_cmd') == null) return
-    if (document.querySelector('#table_cmd thead') == null) {
-        table = '<thead>'
+    if (document.getElementById('table_cmd') === null) return
+    if (document.querySelector('#table_cmd thead') === null) {
+        let table = '<thead>'
         table += '<tr>'
         table += '<th>Id</th>'
         table += '<th>{{Nom}}</th>'
@@ -38,7 +26,7 @@ function addCmdToTable(_cmd) {
         document.getElementById('table_cmd').insertAdjacentHTML('beforeend', table)
     }
     if (!isset(_cmd)) {
-        var _cmd = { configuration: {} }
+        _cmd = { configuration: {} }
     }
     if (!isset(_cmd.configuration)) {
         _cmd.configuration = {}
@@ -54,7 +42,7 @@ function addCmdToTable(_cmd) {
     tr += '<span class="input-group-btn"><a class="cmdAction btn btn-sm btn-default" data-l1key="chooseIcon" title="{{Choisir une icône}}"><i class="fas fa-icons"></i></a></span>'
     tr += '<span class="cmdAttr input-group-addon roundedRight" data-l1key="display" data-l2key="icon" style="font-size:19px;padding:0 5px 0 0!important;"></span>'
     tr += '</div>'
-    if (_cmd.type == 'action' && (_cmd.logicalId == 'song')) {
+    if (init(_cmd.type) === 'action' && init(_cmd.logicalId) === 'song') {
         tr += '<select class="cmdAttr form-control input-sm" data-l1key="value" style="display:none;margin-top:5px;" title="{{Commande info liée}}">'
         tr += '<option value="">{{Aucune}}</option>'
         tr += '</select>'
@@ -64,7 +52,7 @@ function addCmdToTable(_cmd) {
     tr += '<span class="type" type="' + init(_cmd.type) + '">' + jeedom.cmd.availableType() + '</span>'
     tr += '<span class="subType" subType="' + init(_cmd.subType) + '"></span>'
     tr += '</td>'
-    tr += '<td style="min-width:400px"><input class="cmdAttr form-control input-sm" data-l1key="logicalId" value="0" style="width : 70%; display : inline-block;" placeholder="{{Commande}}"><br/>'
+    tr += '<td style="min-width:400px"><input class="cmdAttr form-control input-sm" data-l1key="logicalId" style="width : 70%; display : inline-block;" placeholder="{{Commande}}"><br/>'
     tr += '</td>'
 
     tr += '<td>'
@@ -84,29 +72,31 @@ function addCmdToTable(_cmd) {
     tr += '</td>'
     tr += '</tr>'
 
-    let newRow = document.createElement('tr')
-    newRow.innerHTML = tr
-    newRow.addClass('cmd')
-    newRow.setAttribute('data-cmd_id', init(_cmd.id))
-    document.getElementById('table_cmd').querySelector('tbody').appendChild(newRow)
+    const temp = document.createElement('tbody')
+    temp.innerHTML = tr
+    const newRow = temp.firstElementChild
+    document.querySelector('#table_cmd tbody').appendChild(newRow)
 
-    jeedom.eqLogic.buildSelectCmd({
-        id: document.querySelector('.eqLogicAttr[data-l1key="id"]').jeeValue(),
-        filter: { type: 'info' },
-        error: function (error) {
-            jeedomUtils.showAlert({ message: error.message, level: 'danger' })
-        },
-        success: function (result) {
-            newRow.querySelector('.cmdAttr[data-l1key="value"]')?.insertAdjacentHTML('beforeend', result)
-            newRow.setJeeValues(_cmd, '.cmdAttr')
-            jeedom.cmd.changeType(newRow, init(_cmd.subType))
-        }
-    })
-}
-
-function printEqLogic(_eqLogic) {
-
-    $MPDtype = _eqLogic.configuration.type;
+    const valueField = newRow.querySelector('.cmdAttr[data-l1key="value"]')
+    if (valueField) {
+        jeedom.eqLogic.buildSelectCmd({
+            id: document.querySelector('.eqLogicAttr[data-l1key="id"]').jeeValue(),
+            filter: { type: 'info' },
+            error: function (error) {
+                jeedomUtils.showAlert({ message: error.message, level: 'danger' })
+            },
+            success: function (result) {
+                // comme la fonction est executée en asynchrone, il est nécessaire de faire les mises à jour des commandes dans le success
+                valueField.insertAdjacentHTML('beforeend', result)
+                newRow.setJeeValues(_cmd, '.cmdAttr')
+                jeedom.cmd.changeType(newRow, init(_cmd.subType))
+            }
+        })
+    } else {
+        // evite de lire les commandes info à chaque fois
+        newRow.setJeeValues(_cmd, '.cmdAttr')
+        jeedom.cmd.changeType(newRow, init(_cmd.subType))
+    }
 }
 
 document.querySelector('#bt_TestConnexionMPD').addEventListener('click', function () {
@@ -125,14 +115,14 @@ document.querySelector('#bt_TestConnexionMPD').addEventListener('click', functio
             handleAjaxError(request, status, error)
         },
         success: function (data) {
-            var message = data.result;
+            var message = String(data.result || '');
 
             var level = 'success';
-            if (message.substr(0, 2) === 'KO') {
+            if (message.startsWith('KO')) {
                 level = 'warning';
             }
             if (message.length >= 4) {
-                message = message.substr(3);
+                message = message.substring(3);
             }
             jeedomUtils.showAlert({
                 message: message,
@@ -160,20 +150,20 @@ document.querySelector('#bt_Generer_Commandes').addEventListener('click', functi
             handleAjaxError(request, status, error)
         },
         success: function (data) {
-            var message = data.result;
+            var message = String(data.result || '');
 
             var level = 'success';
-            if (message.substr(0, 2) === 'KO') {
+            if (message.startsWith('KO')) {
                 level = 'info';
             }
             if (message.length >= 4) {
-                message = message.substr(3);
+                message = message.substring(3);
             }
             jeedomUtils.showAlert({
                 message: message,
                 level: level
             })
-            if (level == 'success') {
+            if (level === 'success') {
                 setTimeout(function () {
                     location.reload()
                 }, 3000)
@@ -200,14 +190,14 @@ document.querySelector('#bt_set_layout').addEventListener('click', function () {
             handleAjaxError(request, status, error)
         },
         success: function (data) {
-            var message = data.result;
+            var message = String(data.result || '');
 
             var level = 'success';
-            if (message.substr(0, 2) === 'KO') {
+            if (message.startsWith('KO')) {
                 level = 'info';
             }
             if (message.length >= 4) {
-                message = message.substr(3);
+                message = message.substring(3);
             }
             jeedomUtils.showAlert({
                 message: message,

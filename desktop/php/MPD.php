@@ -1,6 +1,12 @@
 <?php
 
-// Last Modified : 2026/08/20 16:47:08
+// Last Modified : 2026/08/22 18:44:09
+
+/*
+ * Copyright (C) 2026 Bernard Dandrea
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * https://www.gnu.org/licenses/gpl-3.0.html
+ */
 
 if (!isConnect('admin')) {
   throw new Exception('{{401 - Accès non autorisé}}');
@@ -72,16 +78,15 @@ $eqLogics = eqLogic::byType($plugin->getId());
     <!-- barre de gestion de l'équipement -->
     <div class="input-group pull-right" style="display:inline-flex;">
       <span class="input-group-btn">
-        <!-- Les balises <a></a> sont volontairement fermées à la ligne suivante pour éviter les espaces entre les boutons. Ne pas modifier -->
-        <a class="btn btn-sm btn-default eqLogicAction roundedLeft" data-action="copy"><i
-            class="fas fa-copy"></i><span class="hidden-xs"> {{Dupliquer}}</span>
-        </a><a class="btn btn-sm btn-default eqLogicAction roundedLeft" data-action="configure"><i
-            class="fas fa-cogs"></i><span class="hidden-xs"> {{Configuration avancée}}</span>
-        </a><a class="btn btn-sm btn-success eqLogicAction" data-action="save"><i class="fas fa-check-circle"></i>
-          {{Sauvegarder}}
-        </a><a class="btn btn-sm btn-danger eqLogicAction roundedRight" data-action="remove"><i
-            class="fas fa-minus-circle"></i> {{Supprimer}}
-        </a>
+        <!--
+        Ne pas ajouter de retour à la ligne ni d'espace entre les balises </a> et <a>.
+        Les boutons sont volontairement adjacents pour éviter un espace
+        visuel entre eux avec le rendu inline/inline-block de Bootstrap.
+        -->
+        <a class="btn btn-sm btn-default eqLogicAction roundedLeft" data-action="copy"><i class="fas fa-copy"></i><span class="hidden-xs"> {{Dupliquer}}</span>
+        </a><a class="btn btn-sm btn-default eqLogicAction roundedLeft" data-action="configure"><i class="fas fa-cogs"></i><span class="hidden-xs"> {{Configuration avancée}}</span>
+        </a><a class="btn btn-sm btn-success eqLogicAction" data-action="save"><i class="fas fa-check-circle"></i> {{Sauvegarder}}
+        </a><a class="btn btn-sm btn-danger eqLogicAction roundedRight" data-action="remove"><i class="fas fa-minus-circle"></i> {{Supprimer}}</a>
       </span>
     </div>
     <!-- Onglets -->
@@ -148,32 +153,33 @@ $eqLogics = eqLogic::byType($plugin->getId());
               </div>
               <div class="form-group">
                 <label class="col-sm-4 control-label"></label>
-                <div class="col-sm-4">
-                  <a class="btn btn-default " id="bt_TestConnexionMPD" title="{{Si vous avez modifié un des paramètres de connexion, veuillez d'abord sauvegarder la configuration avant de lancer le test}}"><i class="fa fa-cogs"> {{Tester la connexion au MPD}}</i></a>
-                  <a class="btn btn-default " id="bt_Generer_Commandes" title="{{Utile si vous avez supprimé une commande et souhaitez la recréer}}"><i class="fa fa-cogs"> {{Générer les commandes}}</i></a>
-                  <a class="btn btn-default " id="bt_set_layout" title="{{Nécessaire si cet équipement est issu de la duplication d'un autre équipement}}"><i class="fa fa-cogs"> {{Réinitialiser la disposition des commandes}}</i></a>
+                <div class="col-sm-8">
+                  <a class="btn btn-default " id="bt_TestConnexionMPD" title="{{Si vous avez modifié un des paramètres de connexion, veuillez d'abord sauvegarder la configuration avant de lancer le test}}"><i class="fa fa-cogs"></i> {{Tester la connexion au MPD}}
+                  </a><a class="btn btn-default " id="bt_Generer_Commandes" title="{{Utile si vous avez supprimé une commande et souhaitez la recréer}}"><i class="fa fa-cogs"></i> {{Générer les commandes}}
+                  </a><a class="btn btn-default " id="bt_set_layout" title="{{Nécessaire si cet équipement est issu de la duplication d'un autre équipement}}"><i class="fa fa-cogs"></i> {{Réinitialiser la disposition des commandes}}</a>
                 </div>
               </div>
 
               <div class="form-group ">
                 <label class="col-sm-4 control-label">{{Adresse IP}}</label>
                 <div class="col-sm-6">
-                  <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="ip"">
+                  <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="ip">
                 </div>
               </div>
               <div class=" form-group ">
                 <label class=" col-sm-4 control-label">{{Port}}</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="port"">
+                <div class="col-sm-6">
+                  <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="port">
                 </div>
               </div>
-                <div class=" form-group ">
-                  <label class=" col-sm-4 control-label">{{Mot de passe}}</label>
-                    <div class="col-sm-6">
-                      <input type="password" class="eqLogicAttr form-control" data-l1key="configuration"
-                        data-l2key="password" />
-                    </div>
-                  </div>
+              <div class=" form-group ">
+                <label class=" col-sm-4 control-label">{{Mot de passe}}</label>
+                <div class="col-sm-6">
+                  <input type="password" class="eqLogicAttr form-control" data-l1key="configuration"
+                    data-l2key="password" />
+                </div>
+              </div>
+            </div>
           </fieldset>
         </form>
       </div>
@@ -183,7 +189,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
       <div role="tabpanel" class="tab-pane" id="commandtab">
         <div class="input-group pull-right" style="display:inline-flex;margin-top:5px;">
           <span class="input-group-btn">
-            <a class="btn btn-info btn-xs roundedLeft " id="bt_create_command" title=' {{Créer une commande}}'><i class="fas fa-plus-circle"> {{Créer une commande}}</i></a>
+            <a class="btn btn-info btn-xs roundedLeft " id="bt_create_command"><i class="fas fa-plus-circle"></i> {{Créer une commande}}</a>
           </span>
         </div>
         <br><br>
