@@ -20,8 +20,10 @@
     "plugins\/MPD\/desktop\/js\/MPD.js": {
         "Action": "Action",
         "Afficher": "Show",
+        "Aucune": "None",
         "Choisir une icône": "Choose an icon",
         "Commande": "Command",
+        "Commande info liée": "Related command",
         "Historiser": "Historize",
         "Nom": "Name",
         "Nom de la commande": "Name of the command",
@@ -51,16 +53,18 @@
         "Mes MPDs": "My MPDs",
         "Mot de passe": "Password",
         "Nom du MPD": "MPD name",
+        "Nécessaire si cet équipement est issu de la duplication d'un autre équipement": "Required if this device is a duplicate of another device",
         "Objet parent": "Parent object",
         "Options": "Options",
         "Paramètres généraux": "General settings",
         "Port": "Port",
         "Rechercher": "Search",
-        "Réinitialisée la disposition des commandes": "Reset the command layout",
+        "Réinitialiser la disposition des commandes": "Reset the command layout",
         "Sauvegarder": "Save",
-        "Sauvegarder la configuration avant de lancer le test": "Save the configuration before running the test",
+        "Si vous avez modifié un des paramètres de connexion, veuillez d'abord sauvegarder la configuration avant de lancer le test": "If you have changed any of the connection settings, please save the configuration before running the test",
         "Supprimer": "Delete",
         "Tester la connexion au MPD": "Test the connection to the MPD",
+        "Utile si vous avez supprimé une commande et souhaitez la recréer": "Useful if you've deleted a command and want to recreate it",
         "Visible": "Visible"
     }
 }
