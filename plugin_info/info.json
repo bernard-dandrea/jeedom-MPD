@@ -22,8 +22,8 @@
 	"maxDependancyInstallTime": 30,
 	"changelog": "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/changelog",
 	"documentation": "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/index",
-	"changelog_beta": "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/changelog_beta",
-	"documentation_beta": "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/index_beta",
+	"changelog_beta": "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/changelog",
+	"documentation_beta": "https://bernard-dandrea.github.io/documentation/jeedom-MPD/doc/#language#/index",
 	"link": {},
 	"language": [
 		"de_DE",
