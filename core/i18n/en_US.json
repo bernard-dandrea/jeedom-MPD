@@ -8,7 +8,7 @@
         "Connexion KO: ": "Connection KO: ",
         "Connexion OK: ": "Connection OK: ",
         "Disposition réinitialisée": "Layout reset",
-        "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipment disabled, unable to execute command: ",
+        "Equipement désactivé impossible d\\'éxecuter la commande :": "Device disabled; unable to execute the command:",
         "Toutes les commandes sont déjà générées": "All commands have already been generated",
         "Type d action non défini : ": "Undefined action type: ",
         "Une ou plusieurs commandes ont été générées": "One or more commands have been generated",
