@@ -42,6 +42,35 @@ class MPD extends eqLogic
 
         return $result;
     }
+
+    function volumioClearQueue(): bool
+    {
+
+        $ip = $this->getConfiguration('ip');
+        $url = 'http://' . $ip . '/api/v1/commands/?cmd=clearQueue';
+
+        $ch = curl_init($url);
+
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_TIMEOUT => 5,
+            CURLOPT_CONNECTTIMEOUT => 3
+        ]);
+
+        $response = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $error = curl_error($ch);
+
+        curl_close($ch);
+
+        if ($response === false || $httpCode !== 200) {
+            log::add(__CLASS__, 'warning', 'Volumio clearQueue : ' . $error . ' (HTTP ' . $httpCode . ')');
+            return false;
+        }
+
+        return true;
+    }
+
     public function test_connexion()
     {
 
@@ -423,6 +452,27 @@ class MPD extends eqLogic
             }
         }
 
+        $logicalID = 'volumio_clear';
+        $name = 'Clear Volumio Playlist';
+        if (is_object(cmd::byEqLogicIdCmdName($this->getId(), $name)) === false) {
+            unset($command);
+            $command = cmd::byEqLogicIdAndLogicalId($this->getId(), $logicalID);
+            if (!is_object($command)) {
+                $command = new MPDCmd();
+                $command->setLogicalId($logicalID);
+                $command->setIsVisible(1);
+
+                $command->setOrder('1');
+                $command->setName($name);
+                $command->setDisplay('icon', '<i class="icon jeedomapp-reload"></i>');
+                $command->setType('action');
+                $command->setSubType('other');
+                $command->setEqLogic_id($this->getId());
+                $command->save();
+
+                $update_eqlogic = true;
+            }
+        }
 
 
         $return = 'KO ' . __('Toutes les commandes sont déjà générées', __FILE__);
@@ -553,6 +603,12 @@ class MPDCmd extends cmd
             log::add($plugin, 'debug', 'playsong ' . $LogicalID . ' ' . $value);
         }
 
+        if (strtolower(substr($LogicalID, 0, 4)) === 'url ') {
+            $value = trim(substr($LogicalID, 3));
+            $LogicalID = 'url';
+            log::add($plugin, 'debug',  $LogicalID . ' ' . $value);
+        }
+
         switch ($LogicalID) {
             case 'refresh':
                 log::add($plugin, 'debug', 'execute ' . $this->getName() . ' logicalID ' . $LogicalID);
@@ -591,6 +647,11 @@ class MPDCmd extends cmd
 
                 $eqLogic->refreshWidget();
                 return true;
+
+            case 'volumio_clear':
+
+                log::add($plugin, 'debug', 'execute ' . $this->getName() . ' logicalID ' . $LogicalID);
+                $eqLogic->volumioClearQueue();
 
             case 'mute':
 
@@ -666,8 +727,18 @@ class MPDCmd extends cmd
                     }
                 }
 
-                log::add($plugin, 'debug', 'song ' . $value . ' ' . __('non trouvé dans la queue de MPD', __FILE__));
-                return false;
+            case 'url':
+
+                $result = $eqLogic->call_mpc('clear');
+                $result = $eqLogic->call_mpc(sprintf('insert %s', $value));
+                $result = $eqLogic->call_mpc('play');
+
+                unset($command);
+                $command = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(), 'refresh');
+                if (is_object($command)) {
+                    $command->execCmd();
+                }
+                return true;
 
             default:
 
