@@ -1,6 +1,6 @@
 <?php
 
-// Last Modified : 2026/10/04 18:26:31
+// Last Modified : 2026/11/16 18:06:47
 
 /*
  * Copyright (C) 2026 Bernard Dandrea
@@ -38,7 +38,7 @@ class MPD extends eqLogic
             $result = array($result);
         }
 
-        log::add(__CLASS__, 'debug', 'call_mpc ' . ' request ' . $request . ' result ' . (isset($result[0]) ? $result[0] : ''));
+        log::add(__CLASS__, 'debug', 'call_mpc ' . ' request ' . $request . ' result ' . ($result[0] ?? ''));
 
         return $result;
     }
@@ -79,12 +79,12 @@ class MPD extends eqLogic
         $request = 'version';
         $result = $this->call_mpc($request);
 
-        if (strpos($result[0], 'version') !== false) {
+        if (strpos(($result[0] ?? ''), 'version') !== false) {
             $msg = 'OK ' . __('Connexion OK: ', __FILE__);
         } else {
             $msg = 'KO ' . __('Connexion KO: ', __FILE__);
         }
-        $msg .= ' ' .  $result[0];
+        $msg .= ' ' .  ($result[0] ?? '');
         log::add(__CLASS__, 'debug', $msg);
         return $msg;
     }
@@ -616,7 +616,7 @@ class MPDCmd extends cmd
                 $command = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(), 'current');
                 if (is_object($command)) {
                     $result = $eqLogic->call_mpc('current');
-                    $command->event($result[0]);
+                    $command->event(($result[0] ?? ''));
                 }
 
                 $request = 'lsplaylists';
@@ -659,10 +659,10 @@ class MPDCmd extends cmd
                 $request = 'volume';
                 $result = $eqLogic->call_mpc($request);
 
-                if (substr($result[0], 0, 7) !== 'volume:') {
+                if (substr(($result[0] ?? ''), 0, 7) !== 'volume:') {
                     return false;
                 }
-                $volume = trim(str_replace('volume: ', '', $result[0]));
+                $volume = trim(str_replace('volume: ', '', ($result[0] ?? '')));
                 if ($volume === '0%') { // sort du mute
                     $volume = $eqLogic->getConfiguration('mute_volume', '');
                     if ($volume === '') {
@@ -704,7 +704,7 @@ class MPDCmd extends cmd
 
                 $request = 'current -f %file%';
                 $result = $eqLogic->call_mpc($request);
-                if (isset($result[0]) &&  $result[0] == $value) {
+                if (($result[0] ?? '') == $value) {
                     log::add($plugin, 'debug', 'song ' . $value . ' ' . __('déjà en cours', __FILE__));
                     return true;
                 }
