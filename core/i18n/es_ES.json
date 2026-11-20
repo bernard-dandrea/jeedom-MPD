@@ -8,13 +8,13 @@
         "Connexion KO: ": "Conexión KO: ",
         "Connexion OK: ": "Conexión correcta: ",
         "Disposition réinitialisée": "Configuración restablecida",
-        "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipo desactivado, imposible ejecutar el comando: ",
+        "Equipement désactivé impossible d\\'éxecuter la commande :": "Equipo desactivado, no se puede ejecutar el comando:",
         "Toutes les commandes sont déjà générées": "Todos los pedidos ya se han generado",
-        "Type d action non défini : ": "Tipo de acción no definido: ",
+        "Type d\\'action non défini : %s": "Tipo de acción no definido: %s",
         "Une ou plusieurs commandes ont été générées": "Se han generado uno o varios pedidos",
         "commande": "control",
         "déjà en cours": "ya en marcha",
-        "non trouvé dans la queue de MPD": "no encontrado en la cola de MPD",
+        "exécute %s requête %s": "ejecuta %s solicitud %s",
         "trouvé dans la queue de MPD": "encontrado en la cola de MPD"
     },
     "plugins\/MPD\/desktop\/js\/MPD.js": {

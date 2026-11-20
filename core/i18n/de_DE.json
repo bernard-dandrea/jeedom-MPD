@@ -8,13 +8,13 @@
         "Connexion KO: ": "KO-Verbindung: ",
         "Connexion OK: ": "Verbindung OK: ",
         "Disposition réinitialisée": "Anordnung zurückgesetzt",
-        "Equipement desactivé impossible d\\éxecuter la commande : ": "Gerät deaktiviert, Befehl kann nicht ausgeführt werden: ",
+        "Equipement désactivé impossible d\\'éxecuter la commande :": "Gerät deaktiviert, Befehl kann nicht ausgeführt werden:",
         "Toutes les commandes sont déjà générées": "Alle Bestellungen wurden bereits generiert",
-        "Type d action non défini : ": "Aktionsart nicht definiert: ",
+        "Type d\\'action non défini : %s": "Nicht definierter Aktionstyp: %s",
         "Une ou plusieurs commandes ont été générées": "Es wurden eine oder mehrere Bestellungen generiert",
         "commande": "Steuerung",
         "déjà en cours": "bereits im Gange",
-        "non trouvé dans la queue de MPD": "nicht in der MPD-Warteschlange gefunden",
+        "exécute %s requête %s": "Führt %s-Abfrage %s aus",
         "trouvé dans la queue de MPD": "gefunden in der MPD-Warteschlange"
     },
     "plugins\/MPD\/desktop\/js\/MPD.js": {

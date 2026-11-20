@@ -8,13 +8,13 @@
         "Connexion KO: ": "Connection KO: ",
         "Connexion OK: ": "Connection OK: ",
         "Disposition réinitialisée": "Layout reset",
-        "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipment disabled, unable to execute command: ",
+        "Equipement désactivé impossible d\\'éxecuter la commande :": "Device disabled; unable to execute the command:",
         "Toutes les commandes sont déjà générées": "All commands have already been generated",
-        "Type d action non défini : ": "Undefined action type: ",
+        "Type d\\'action non défini : %s": "Undefined action type: %s",
         "Une ou plusieurs commandes ont été générées": "One or more commands have been generated",
         "commande": "command",
         "déjà en cours": "already underway",
-        "non trouvé dans la queue de MPD": "not found in the MPD queue",
+        "exécute %s requête %s": "executes %s request %s",
         "trouvé dans la queue de MPD": "found in the MPD queue"
     },
     "plugins\/MPD\/desktop\/js\/MPD.js": {
