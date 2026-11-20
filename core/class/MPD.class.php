@@ -1,6 +1,6 @@
 <?php
 
-// Last Modified : 2026/11/16 18:06:47
+// Last Modified : 2026/11/20 18:40:05
 
 /*
  * Copyright (C) 2026 Bernard Dandrea
@@ -38,7 +38,7 @@ class MPD extends eqLogic
             $result = array($result);
         }
 
-        log::add(__CLASS__, 'debug', 'call_mpc ' . ' request ' . $request . ' result ' . ($result[0] ?? ''));
+        log::add(__CLASS__, 'debug', __FUNCTION__ . ' ' . sprintf('requête %s resultat %s', $request, ($result[0] ?? '')));
 
         return $result;
     }
@@ -64,7 +64,7 @@ class MPD extends eqLogic
         curl_close($ch);
 
         if ($response === false || $httpCode !== 200) {
-            log::add(__CLASS__, 'warning', 'Volumio clearQueue : ' . $error . ' (HTTP ' . $httpCode . ')');
+            log::add(__CLASS__, 'warning', __FUNCTION__ . ' ' . sprintf('%s (HTTP %d)', $error, $httpCode));
             return false;
         }
 
@@ -592,7 +592,7 @@ class MPDCmd extends cmd
                 $value = '';
                 break;
             default:
-                log::add($plugin, 'info', __('Type d action non défini : ', __FILE__) . $this->getSubType());
+                log::add($plugin, 'info', sprintf(__('Type d\'action non défini : %s', __FILE__), $this->getSubType()));
                 die;
                 break;
         }
@@ -744,7 +744,7 @@ class MPDCmd extends cmd
 
                 $request = str_replace('%1', $value, $LogicalID);
 
-                log::add($plugin, 'debug', 'execute ' . $this->getName() . ' request ' . $request);
+                log::add($plugin, 'debug', sprintf(__('exécute %s requête %s', __FILE__), $this->getName(), $request));
                 $result = $eqLogic->call_mpc($request);
                 if ($LogicalID === 'prev' || $LogicalID === 'next') {
                     unset($command);
