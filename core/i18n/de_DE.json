@@ -5,10 +5,17 @@
         "MPD eqLogic non trouvé : ": "MPD eqLogic nicht gefunden: "
     },
     "plugins\/MPD\/core\/class\/MPD.class.php": {
-        " commande ": " Steuerung ",
         "Connexion KO: ": "KO-Verbindung: ",
         "Connexion OK: ": "Verbindung OK: ",
-        "Equipement desactivé impossible d\\éxecuter la commande : ": "Gerät deaktiviert, Befehl kann nicht ausgeführt werden: "
+        "Disposition réinitialisée": "Anordnung zurückgesetzt",
+        "Equipement désactivé impossible d\\'éxecuter la commande :": "Gerät deaktiviert, Befehl kann nicht ausgeführt werden:",
+        "Toutes les commandes sont déjà générées": "Alle Bestellungen wurden bereits generiert",
+        "Type d\\'action non défini : %s": "Nicht definierter Aktionstyp: %s",
+        "Une ou plusieurs commandes ont été générées": "Es wurden eine oder mehrere Bestellungen generiert",
+        "commande": "Steuerung",
+        "déjà en cours": "bereits im Gange",
+        "exécute %s requête %s": "Führt %s-Abfrage %s aus",
+        "trouvé dans la queue de MPD": "gefunden in der MPD-Warteschlange"
     },
     "plugins\/MPD\/desktop\/js\/MPD.js": {
         "Action": "Aktion",
@@ -16,25 +23,14 @@
         "Aucune": "Irgendein",
         "Choisir une icône": "Wählen Sie ein Symbol",
         "Commande": "Bestellt",
-        "Commande d\\'information à mettre à jour": "Bestellinformationen zu aktualisieren",
-        "Commande info liée": "Verwandte Informationen bestellen",
-        "Durée avant retour d\\'état (min)": "Dauer vor Statusrückgabe (min)",
+        "Commande info liée": "Verwandte Informationen",
         "Historiser": "Chronik",
-        "Inverser": "Umgekehrt",
-        "La valeur de la commande vaut par défaut la commande": "Der Wert des Befehls ist standardmäßig der Befehl",
-        "Liste": "Auflistung",
-        "Liste de valeur|texte séparé par ;": "Werteliste|Text getrennt durch;",
-        "Max": "Max",
-        "Min": "Minimum",
         "Nom": "Name",
         "Nom de la commande": "Befehlsname",
-        "Options": "Optionen",
         "Paramètres": "Die Einstellungen",
         "Tester": "Prüfung",
         "Type": "Typ",
-        "Unité": "Unit",
-        "Valeur": "Wert",
-        "Valeur retour d\\'état": "Statusrückgabewert"
+        "Valeur": "Wert"
     },
     "plugins\/MPD\/desktop\/php\/MPD.php": {
         "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
@@ -48,6 +44,7 @@
         "Configuration": "Konfiguration",
         "Configuration avancée": "Erweiterte Konfiguration",
         "Créer une commande": "Befehl erstellen",
+        "Dupliquer": "Duplikat",
         "Equipement": "Gerät",
         "Equipement non visible": "Nicht sichtbare Ausstattung",
         "Equipement visible": "Sichtbare Ausstattung",
@@ -56,14 +53,18 @@
         "Mes MPDs": "Meine MPDs",
         "Mot de passe": "Passwort",
         "Nom du MPD": "Name des MPD",
+        "Nécessaire si cet équipement est issu de la duplication d'un autre équipement": "Erforderlich, wenn dieses Gerät durch Duplizieren eines anderen Geräts erstellt wurde",
         "Objet parent": "Übergeordnetes Objekt",
         "Options": "Optionen",
         "Paramètres généraux": "Allgemeine Einstellungen",
         "Port": "Hafen",
         "Rechercher": "Suchen nach",
+        "Réinitialiser la disposition des commandes": "Anordnung der Bedienelemente zurücksetzen",
         "Sauvegarder": "Zu schützen",
+        "Si vous avez modifié un des paramètres de connexion, veuillez d'abord sauvegarder la configuration avant de lancer le test": "Wenn Sie eine der Verbindungseinstellungen geändert haben, speichern Sie bitte zunächst die Konfiguration, bevor Sie den Test starten.",
         "Supprimer": "Entfernen",
         "Tester la connexion au MPD": "Verbindung zum MPD testen",
+        "Utile si vous avez supprimé une commande et souhaitez la recréer": "Nützlich, wenn Sie einen Befehl gelöscht haben und ihn erneut erstellen möchten",
         "Visible": "Sichtbar"
     }
 }

@@ -1,18 +1,11 @@
 <?php
-/* This file is part of Jeedom.
- *
- * Jeedom is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Jeedom is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
+
+// Last Modified : 2026/08/22 18:46:20
+
+/*
+ * Copyright (C) 2026 Bernard Dandrea
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * https://www.gnu.org/licenses/gpl-3.0.html
  */
 
 try {
@@ -22,11 +15,6 @@ try {
     if (!isConnect('admin')) {
         throw new Exception(__('401 - Accès non autorisé', __FILE__));
     }
-
-    /* Fonction permettant l'envoi de l'entête 'Content-Type: application/json'
-    En V3 : indiquer l'argument 'true' pour contrôler le token d'accès Jeedom
-    En V4 : autoriser l'exécution d'une méthode 'action' en GET en indiquant le(s) nom(s) de(s) action(s) dans un tableau en argument
-    */
     ajax::init();
 
   
@@ -41,7 +29,7 @@ try {
         ajax::success($MPD);
 
     }
-        
+
     if (init('action') == 'generer_commandes') {
 
         $eqLogic = MPD::byId(init('id'));
@@ -53,6 +41,19 @@ try {
         ajax::success($MPD);
 
     }
+
+  if (init('action') == 'bt_set_layout') {
+
+        $eqLogic = MPD::byId(init('id'));
+        if (!is_object($eqLogic)) {
+            throw new \Exception(__('MPD eqLogic non trouvé : ', __FILE__) . init('id'));
+        }
+        
+        $MPD = $eqLogic->bt_set_layout();
+        ajax::success($MPD);
+
+    }
+
 
     throw new Exception(__('Aucune méthode correspondante à', __FILE__) . ' : ' . init('action'));
     /*     * *********Catch exeption*************** */

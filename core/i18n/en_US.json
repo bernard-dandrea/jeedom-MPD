@@ -5,10 +5,17 @@
         "MPD eqLogic non trouvé : ": "MPD eqLogic not found: "
     },
     "plugins\/MPD\/core\/class\/MPD.class.php": {
-        " commande ": " command ",
         "Connexion KO: ": "Connection KO: ",
         "Connexion OK: ": "Connection OK: ",
-        "Equipement desactivé impossible d\\éxecuter la commande : ": "Equipment disabled, unable to execute command: "
+        "Disposition réinitialisée": "Layout reset",
+        "Equipement désactivé impossible d\\'éxecuter la commande :": "Device disabled; unable to execute the command:",
+        "Toutes les commandes sont déjà générées": "All commands have already been generated",
+        "Type d\\'action non défini : %s": "Undefined action type: %s",
+        "Une ou plusieurs commandes ont été générées": "One or more commands have been generated",
+        "commande": "command",
+        "déjà en cours": "already underway",
+        "exécute %s requête %s": "executes %s request %s",
+        "trouvé dans la queue de MPD": "found in the MPD queue"
     },
     "plugins\/MPD\/desktop\/js\/MPD.js": {
         "Action": "Action",
@@ -16,25 +23,14 @@
         "Aucune": "None",
         "Choisir une icône": "Choose an icon",
         "Commande": "Command",
-        "Commande d\\'information à mettre à jour": "Information command to update",
-        "Commande info liée": "Related info command",
-        "Durée avant retour d\\'état (min)": "Duration before status return (min)",
+        "Commande info liée": "Related command",
         "Historiser": "Historize",
-        "Inverser": "Invert",
-        "La valeur de la commande vaut par défaut la commande": "The value of the command is by default the command",
-        "Liste": "List",
-        "Liste de valeur|texte séparé par ;": "List of value|text separated by;",
-        "Max": "Maximum",
-        "Min": "Minimum",
         "Nom": "Name",
         "Nom de la commande": "Name of the command",
-        "Options": "Options",
         "Paramètres": "Settings",
         "Tester": "Test",
         "Type": "Type",
-        "Unité": "Unit",
-        "Valeur": "Value",
-        "Valeur retour d\\'état": "Status return value"
+        "Valeur": "Value"
     },
     "plugins\/MPD\/desktop\/php\/MPD.php": {
         "401 - Accès non autorisé": "401 - Unauthorized access",
@@ -48,6 +44,7 @@
         "Configuration": "Configuration",
         "Configuration avancée": "Advanced configuration",
         "Créer une commande": "Create a command",
+        "Dupliquer": "Duplicate",
         "Equipement": "Equipment",
         "Equipement non visible": "Non-visible equipment",
         "Equipement visible": "Visible equipment",
@@ -56,14 +53,18 @@
         "Mes MPDs": "My MPDs",
         "Mot de passe": "Password",
         "Nom du MPD": "MPD name",
+        "Nécessaire si cet équipement est issu de la duplication d'un autre équipement": "Required if this device is a duplicate of another device",
         "Objet parent": "Parent object",
         "Options": "Options",
         "Paramètres généraux": "General settings",
         "Port": "Port",
         "Rechercher": "Search",
+        "Réinitialiser la disposition des commandes": "Reset the command layout",
         "Sauvegarder": "Save",
+        "Si vous avez modifié un des paramètres de connexion, veuillez d'abord sauvegarder la configuration avant de lancer le test": "If you have changed any of the connection settings, please save the configuration before running the test",
         "Supprimer": "Delete",
         "Tester la connexion au MPD": "Test the connection to the MPD",
+        "Utile si vous avez supprimé une commande et souhaitez la recréer": "Useful if you've deleted a command and want to recreate it",
         "Visible": "Visible"
     }
 }
